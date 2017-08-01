@@ -1,1 +1,7 @@
 theme: jekyll-theme-hacker
+
+# Site name (head)
+name: PhpTabs Documentation
+
+# Site description (head)
+description: Parsing and writing guitar pro tabs and MIDI files

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-  </head>
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-  <body>
-    <div class="wrapper-container">
-      <div class="container">
-      {{ content }}
-      </div>
+  {% include meta.html %}
+</head>
+
+<body>
+  <div class="wrapper-container">
+
+    <div class="container">
+    {{ content }}
     </div>
-  </body>
+
+  </div>
+</body>
+
 </html>
