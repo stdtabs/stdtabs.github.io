@@ -16,11 +16,11 @@ To have a complete visualization of a tablature, dump method can be used.
 Before traversing the tree, let's instanciate our tab.
 
 
-```php
+{% highlight php %}
 
 $song = new PhpTabs('mytab.gp4');
 
-```
+{% endhighlight %}
 
 ## First level tree
 
@@ -68,7 +68,7 @@ Channel, MeasureHeader and Track can be accessed with following methods:
 
 In these example, we print the channel names.
 
-```php
+{% highlight php %
 
 // Working with all channels
 foreach ($song->getChannels as $channel) {
@@ -83,7 +83,7 @@ echo $song->getChannel(0)->getName() . PHP_EOL;
 echo $song->getChannelById(1)->getName() . PHP_EOL;
 // Outputs something like "Clean Guitar 1"
 
-```
+{% endhighlight %}
 
 ------------------------------------------------------------------------
 
@@ -93,7 +93,7 @@ echo $song->getChannelById(1)->getName() . PHP_EOL;
 
 In these example, we print the tempo for each measure.
 
-```php
+{% highlight php %
 
 // Working with all measure headers
 foreach ($song->getMeasureHeaders() as $header) {
@@ -104,7 +104,7 @@ foreach ($song->getMeasureHeaders() as $header) {
 echo $song->getMeasureHeader(0)->getTempo()->getValue() . PHP_EOL;
 // Outputs something like "90"
 
-```
+{% endhighlight %}
 
 ------------------------------------------------------------------------
 
@@ -114,7 +114,7 @@ echo $song->getMeasureHeader(0)->getTempo()->getValue() . PHP_EOL;
 
 In these example, we print the number of measures by track.
 
-```php
+{% highlight php %
 
 // Working with all tracks
 foreach ($song->getTracks() as $track) {
@@ -125,6 +125,6 @@ foreach ($song->getTracks() as $track) {
 echo $song->getTrack(0)->countMeasures() . PHP_EOL;
 // Outputs something like "4" (small tab!)
 
-```
+{% endhighlight %}
 
 ------------------------------------------------------------------------
