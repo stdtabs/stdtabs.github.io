@@ -4,6 +4,14 @@ theme: jekyll-theme-hacker
 name: PhpTabs Documentation
 
 # Site description (head)
-description: Parsing and writing guitar pro tabs and MIDI files
+description: Parsing and writing GuitarPro tabs and MIDI files
 
 show_downloads: true
+
+# Github repositories and download URLs
+github_zip_url: https://github.com/stdtabs/phptabs/zipball/master
+github_tar_url: https://github.com/stdtabs/phptabs/tarball/master
+github_repository_url: https://github.com/stdtabs/phptabs
+github_author_url: https://github.com/landrok
+github_author_name: landrok
+
