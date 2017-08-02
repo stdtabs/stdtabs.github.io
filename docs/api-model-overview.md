@@ -5,22 +5,19 @@ permalink: api-model-overview.html
 
 # Model Overview
 
-First thing we do with a tab is to browse a full song.
+PhpTabs makes a full song traversable.
 
-This page tries to give an overview of the music-tree. 
+It builds a music-tree which is called the __Music-Object-Model__ (MOM)
 
-This tree is called the __Music-Object-Model__ (MOM)
+To have a complete visualization of the MOM, the dump method can be used.
 
-To have a complete visualization of a tablature, dump method can be used.
-
-Before traversing the tree, let's instanciate our tab.
-
+_Before traversing the tree, let's instanciate our tab._
 
 ```php
-
 $song = new PhpTabs('mytab.gp4');
-
 ```
+
+
 
 ## First level tree
 
@@ -66,7 +63,7 @@ Channel, MeasureHeader and Track can be accessed with following methods:
 
 #### `getChannels()`, `getChannel()` and `getChannelById()` methods
 
-In these example, we print the channel names.
+In this example, we print the channel names.
 
 ```php
 
@@ -91,7 +88,7 @@ echo $song->getChannelById(1)->getName() . PHP_EOL;
 
 #### `getMeasureHeaders()` and `getMeasureHeader()` methods
 
-In these example, we print the tempo for each measure.
+In this example, we print the tempo for each measure.
 
 ```php
 
@@ -112,7 +109,7 @@ echo $song->getMeasureHeader(0)->getTempo()->getValue() . PHP_EOL;
 
 #### `getTracks()` and `getTrack()` methods
 
-In these example, we print the number of measures by track.
+In this example, we print the number of measures by track.
 
 ```php
 
