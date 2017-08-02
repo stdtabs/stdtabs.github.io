@@ -29,8 +29,11 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 ## Documentation
 
-- [API Methods]({{ site.github_repository_url }}/blob/master/README.md)
+- [Getting started](/getting-started.html)
+
 - [Model overview](/api-model-overview.html)
+
+- [API Methods]({{ site.github_repository_url }}/blob/master/README.md)
 
 - Use cases:
 
