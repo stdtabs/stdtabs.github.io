@@ -5,3 +5,5 @@ name: PhpTabs Documentation
 
 # Site description (head)
 description: Parsing and writing guitar pro tabs and MIDI files
+
+show_downloads: true
