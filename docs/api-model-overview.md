@@ -16,7 +16,7 @@ To have a complete visualization of a tablature, dump method can be used.
 Before traversing the tree, let's instanciate our tab.
 
 
-{% highlight php %}
+{% highlight php %}}
 
 $song = new PhpTabs('mytab.gp4');
 
@@ -68,7 +68,7 @@ Channel, MeasureHeader and Track can be accessed with following methods:
 
 In these example, we print the channel names.
 
-{% highlight php %
+{% highlight php %}
 
 // Working with all channels
 foreach ($song->getChannels as $channel) {
@@ -93,7 +93,7 @@ echo $song->getChannelById(1)->getName() . PHP_EOL;
 
 In these example, we print the tempo for each measure.
 
-{% highlight php %
+{% highlight php %}
 
 // Working with all measure headers
 foreach ($song->getMeasureHeaders() as $header) {
@@ -114,7 +114,7 @@ echo $song->getMeasureHeader(0)->getTempo()->getValue() . PHP_EOL;
 
 In these example, we print the number of measures by track.
 
-{% highlight php %
+{% highlight php %}
 
 // Working with all tracks
 foreach ($song->getTracks() as $track) {
