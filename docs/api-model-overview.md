@@ -1,6 +1,6 @@
 ---
 layout: default
-slug: /api-model-overview/
+permalink: api-model-overview.html
 ---
 
 # Model Overview
