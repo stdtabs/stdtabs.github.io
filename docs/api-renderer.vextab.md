@@ -5,11 +5,11 @@ permalink: render-as-vextab.html
 
 {% include vexflow-js.html %}
 
-# Render a tablature formatted as VexTab
+# Render a track as a VexTab string
 
 ## Quick Usage
 
-Print all tabstaves for the first track.
+Print all tabstaves of the first track.
 
 ```php
 
