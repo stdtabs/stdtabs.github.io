@@ -29,7 +29,7 @@ echo $tab
 Will ouput something like:
 
 ```
-options tempo=96 width=1024 scale=1 space=16
+options tempo=96 width=520 scale=1 space=16
 
 tabstave
 	notation=true
