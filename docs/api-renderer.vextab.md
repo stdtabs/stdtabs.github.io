@@ -41,19 +41,7 @@ notes | :8 0/5 9/3 7/4 7/3 T7/3 7/4 0/5 5/3
 
 That renders:
 
-<div id="vextabExample01" width=1024 scale=1.0 editor="true" editor_height=320></div>      
-<div class="editor-error" style="color: red; width: 100%"></div>
-<p></p>
-<textarea id="vextabExample01Staves" style="display: none;">options tempo=96 width=1024 scale=1 space=16
-
-tabstave
-	notation=true
-	tablature=true
-	clef=treble
-	time=4/4
-
-notes | :8 0/5 9/3 7/4 7/3 T7/3 7/4 0/5 5/3
-</textarea>
+{% include_relative examples/_example01.html %}
 
 With a little bit of js vexflow.
 
