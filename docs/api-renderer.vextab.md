@@ -3,7 +3,7 @@ layout: default
 permalink: render-as-vextab.html
 ---
 
-{% include vexflow-js.html.html %}
+{% include vexflow-js.html %}
 
 # Render a tablature formatted as VexTab
 
