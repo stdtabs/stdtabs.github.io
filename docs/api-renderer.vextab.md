@@ -52,7 +52,6 @@ With a little bit of js vexflow.
 <script>
 
 // render vextabExample01
-
 vextab = VexTabDiv;
 $(function() {
   VexTab = vextab.VexTab;

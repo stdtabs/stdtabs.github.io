@@ -37,6 +37,8 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 - Use cases:
 
+  - [Render a track as a VexTab string](/render-as-vextab.html)
+
   - Read measures for a particular track
 
   - Read notes for a particular measure
