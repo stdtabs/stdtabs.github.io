@@ -3,6 +3,8 @@ layout: default
 permalink: render-as-vextab.html
 ---
 
+{% include vexflow-js.html.html %}
+
 # Render a tablature formatted as VexTab
 
 ## Quick Usage
@@ -46,9 +48,6 @@ That renders:
 With a little bit of js vexflow.
 
 ------------------------------------------------------------------------
-
-<script src="https://raw.githubusercontent.com/0xfe/vexflow/master/releases/vexflow-debug.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
 <script>
 
