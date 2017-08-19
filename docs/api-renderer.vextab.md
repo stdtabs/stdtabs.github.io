@@ -53,8 +53,8 @@ With a little bit of js vexflow.
 
 // render vextabExample01
 
+vextab = VexTabDiv;
 $(function() {
-  vextab = VexTabDiv;
   VexTab = vextab.VexTab;
   Artist = vextab.Artist;
   Renderer = Vex.Flow.Renderer;
