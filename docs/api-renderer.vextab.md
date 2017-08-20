@@ -10,7 +10,7 @@ permalink: render-as-vextab.html
 VexTab format is supplied by vexflow.com. If you want to know more 
 about VexTab format, there is a [good tutorial](http://www.vexflow.com/vextab/tutorial.html).
 
-PhpTabs can render a track as a VexTab string.
+PhpTabs can render a track as a VexTab string (Version >= 0.5.0).
 
 ## Quick Usage
 
@@ -156,12 +156,12 @@ All options rendered as "notes ...".
 
 | Feature             | Notation              | Supported |
 |:--------------------|:----------------------|:----------|
-| Bar                 | |                     | OK        |
-| Double Bar          | ||                    | @todo     |
-| Repeat Begin        | =|:                   | OK        |
-| Repeat End          | =:|                   | OK        |
+| Bar                 | \|                    | OK        |
+| Double Bar          | \|\|                  | @todo     |
+| Repeat Begin        | =\|:                  | OK        |
+| Repeat End          | =:\|                  | OK        |
 | Double Repeat       | =::                   | @todo     |
-| End Bar             | =|=                   | @todo     |
+| End Bar             | =\|=                  | @todo     |
 
 - Beats and Notes
 
@@ -193,7 +193,7 @@ All options rendered as "notes ...".
 | open note           | $ah/bottom.$          | @todo     |
 | up fermata          | $a@a/bottom.$         | @todo     |
 | down fermata        | $a@u/bottom.$         | @todo     |
-| bow up              | $a|/bottom.$          | @todo     |
+| bow up              | $a\|/bottom.$         | @todo     |
 | bow down            | $am/bottom.$          | @todo     |
 
 - Lyrics
