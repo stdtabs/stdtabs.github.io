@@ -10,7 +10,7 @@ permalink: render-as-vextab.html
 VexTab format is supplied by vexflow.com. If you want to know more 
 about VexTab format, there is a [good tutorial](http://www.vexflow.com/vextab/tutorial.html).
 
-Tabs can be rendered as VexTab strings track-by-track.
+PhpTabs can render a track as a VexTab string.
 
 ## Quick Usage
 
@@ -50,7 +50,7 @@ With a bit of vexflow JS.
 
 ------------------------------------------------------------------------
 
-## Customize with VexTab options
+## Customize VexTab options
 
 Some options can be passed to override default VexTab options.
 
@@ -67,7 +67,7 @@ $tab = new PhpTabs('mytab.gp4');
 // Available options
 $options = [
   // Renderer options
-  'measures_per_stave' => 1,
+  'measures_per_stave'  => 1,
 
   // Global options
   'space'               => 16,        # An integer
@@ -84,8 +84,8 @@ $options = [
   'player'              => false,     # A boolean, default: false
 
   // Tabstaves options
-  'notation'           => true,       # A boolean, default: false
-  'tablature'          => true,       # A boolean, default: true
+  'notation'            => true,       # A boolean, default: false
+  'tablature'           => true,       # A boolean, default: true
 ];
 
 // Render track 0
@@ -117,6 +117,96 @@ Other options (tempo, clef, key, etc...) will be set by the tab object.
 
 # Supported VexTab features
 
-Feature name | Representation | Supported
+## Global features
 
+All options rendered as "options ...".
 
+| Feature             | Example               | Supported |
+|:--------------------|:----------------------|:----------|
+| tempo               | tempo=192             | OK        |
+| player              | player=true           | OK        |
+| tab-stems           | tab-stems=true        | OK        |
+| tab-stem-direction  | tab-stem-direction=up | OK        |
+| width 	            | width=1024            | OK        |
+| scale               | scale=0.8             | OK        |
+| space 	            | space=16              | OK        |
+| stave-distance	    | stave-distance=16     | OK        |
+| font-face	          | font-face=times       | OK        |
+| font-style	        | font-style=italic     | OK        |
+| font-size 	        | font-size=12          | OK        |
+
+## Stave features
+
+All options rendered as "tabstave ...".
+
+| Feature             | Example               | Supported |
+|:--------------------|:----------------------|:----------|
+| notation            | notation=true         | OK        |
+| tablature           | tablature=true        | OK        |
+| clef                | clef=treble           | OK        |
+| key                 | key=Ab                | @todo     |
+| time 	              | time=4/4              | OK        |
+| tuning              | tuning=eb             | @todo     |
+
+## Measure and beat features
+
+All options rendered as "notes ...".
+
+- Bars
+
+| Feature             | Notation              | Supported |
+|:--------------------|:----------------------|:----------|
+| Bar                 | |                     | OK        |
+| Double Bar          | ||                    | @todo     |
+| Repeat Begin        | =|:                   | OK        |
+| Repeat End          | =:|                   | OK        |
+| Double Repeat       | =::                   | @todo     |
+| End Bar             | =|=                   | @todo     |
+
+- Beats and Notes
+
+| Feature             | Notation              | Supported |
+|:--------------------|:----------------------|:----------|
+| Rest Beat           | ##                    | OK        |
+| Bend                | b                     | OK        |
+| Dead Note           | X                     | OK        |
+| Vibrato             | v                     | OK        |
+| Harsh Vibrato       | V                     | @todo     |
+| Hammer-on           | h                     | OK        |
+| Pull-off            | p                     | OK        |
+| Taps                | t                     | OK        |
+| Slide               | s                     | OK        |
+| Tied Note           | T                     | OK        |
+| Upstroke            | u                     | OK        |
+| Downstroke          | d                     | OK        |
+| Chord Beat          | (0/6.2/5.2/4)         | OK        |
+| Tuplets             | ^n^                   | OK        |
+| Durations           | w h q 8 16 32 64      | OK        |
+| Annotations         | $.$                   | @todo     |
+| Staccato            | $a./bottom.$          | @todo     |
+| Staccatissimo       | $av/bottom.$          | @todo     |
+| Accent              | $a>/bottom.$          | @todo     |
+| Tenuto              | $a-/bottom.$          | @todo     |
+| marcato             | $a^/bottom.$          | @todo     |
+| LH pizzicato        | $a+/bottom.$          | @todo     |
+| snap pizzicato      | $ao/bottom.$          | @todo     |
+| open note           | $ah/bottom.$          | @todo     |
+| up fermata          | $a@a/bottom.$         | @todo     |
+| down fermata        | $a@u/bottom.$         | @todo     |
+| bow up              | $a|/bottom.$          | @todo     |
+| bow down            | $am/bottom.$          | @todo     |
+
+- Lyrics
+
+Lyrics integration still has to be done.
+
+- Musical symbols
+
+| Feature             | Notation              | Supported |
+|:--------------------|:----------------------|:----------|
+| Trills              | #tr                   | @todo     |
+| Codas               | #coda                 | @todo     |
+| Segnos              | #segno                | @todo     |
+| Forte               | #f                    | @todo     |
+
+------------------------------------------------------------------------
