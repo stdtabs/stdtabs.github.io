@@ -31,7 +31,10 @@ echo $tab
 
 ```
 
-Will ouput something like:
+Note that the render() method takes a track index as parameter.
+It starts from 0 for the first track.
+
+Example will ouput something like:
 
 ```
 options scale=1 space=16 width=520 tempo=66
