@@ -1,0 +1,41 @@
+<div id="vextabExample02" class="vextabExample" width="520" scale="1.0" editor="true" editor_height="320"></div>
+<div class="editor-error-ex2" style="color: red; width: 100%"></div>
+<p></p>
+<textarea id="vextabExample02Staves" style="display: none;">options scale=0.8 space=16 width=500 tab-stems=true tab-stem-direction=down stave-distance=20 font-size=12 font-face=times font-style=italic tempo=66
+
+tabstave notation=true time=4/4
+
+notes | :8 0/5 9/3 7/4 7/3 T7/3 7/4 0/5 5/3
+</textarea>
+
+
+<script>
+
+// render vextabExample02
+vextab = VexTabDiv;
+$(function() {
+  VexTab = vextab.VexTab;
+  Artist = vextab.Artist;
+  Renderer = Vex.Flow.Renderer;
+  Artist.DEBUG = false;
+  VexTab.DEBUG = false;
+  // Create VexFlow Renderer from canvas element with id #boo
+  renderer = new Renderer($('#vextabExample02')[0], Renderer.Backends.SVG);
+  // Initialize VexTab artist and parser.
+  artist = new Artist(10, 10, 1024, {scale: 0.8});
+  vextab = new VexTab(artist);
+  function render() {
+    try {
+      vextab.reset();
+      artist.reset();
+      vextab.parse($("#vextabExample02Staves").val());
+      artist.render(renderer);
+      $(".editor-error-ex2").text("");
+    } catch (e) {
+      $(".editor-error-ex2").html(e.message.replace(/[\n]/g, '<br/>'));
+    }
+  }
+  render();
+});
+
+</script>

@@ -7,9 +7,7 @@ pygments: true
 name: PhpTabs Documentation
 
 # Site description (head)
-description: Parsing and writing GuitarPro and MIDI files
-
-show_downloads: true
+description: Parse and write GuitarPro and MIDI files
 
 # Github repositories and download URLs
 github_repository_url: https://github.com/stdtabs/phptabs

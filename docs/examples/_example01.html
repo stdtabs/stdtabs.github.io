@@ -39,7 +39,6 @@ $(function() {
       $(".editor-error").html(e.message.replace(/[\n]/g, '<br/>'));
     }
   }
-  $("#vextabExample01Staves").keyup(_.throttle(render, 250));
   render();
 });
 
