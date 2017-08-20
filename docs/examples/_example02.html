@@ -12,23 +12,23 @@ notes | :8 0/5 9/3 7/4 7/3 T7/3 7/4 0/5 5/3
 <script>
 
 // render vextabExample02
-vextab = VexTabDiv;
+vextab2 = VexTabDiv;
 $(function() {
-  VexTab = vextab.VexTab;
-  Artist = vextab.Artist;
+  VexTab = vextab2.VexTab;
+  Artist = vextab2.Artist;
   Renderer = Vex.Flow.Renderer;
   Artist.DEBUG = false;
   VexTab.DEBUG = false;
   // Create VexFlow Renderer from canvas element with id #boo
-  renderer = new Renderer($('#vextabExample02')[0], Renderer.Backends.SVG);
+  renderer = new Renderer($('#vextab2Example02')[0], Renderer.Backends.SVG);
   // Initialize VexTab artist and parser.
   artist = new Artist(10, 10, 1024, {scale: 0.8});
-  vextab = new VexTab(artist);
+  vextab2 = new VexTab(artist);
   function render() {
     try {
-      vextab.reset();
+      vextab2.reset();
       artist.reset();
-      vextab.parse($("#vextabExample02Staves").val());
+      vextab2.parse($("#vextab2Example02Staves").val());
       artist.render(renderer);
       $(".editor-error-ex2").text("");
     } catch (e) {
