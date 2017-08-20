@@ -12,11 +12,12 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 ------------------------------------------------------------------------
 
-## Read and edit the entire tab
+## Read, edit and render the entire tab
 
 - Read, update, write and convert GuitarPro files
 - Access metadata and data
 - Dump data with various formats (JSON, XML, YAML, text, PHP array, serialized)
+- Render a song in VexTab notation
 
 ------------------------------------------------------------------------
 
@@ -35,7 +36,7 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 - [API Methods]({{ site.github_repository_url }}/blob/master/README.md)
 
-- Use cases:
+- Some use-cases examples:
 
   - [Render a track as a VexTab string](/render-as-vextab.html)
 
