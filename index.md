@@ -1,5 +1,6 @@
 ---
 layout: default
+excerpt: Read, write, update and render music scores, GuitarPro tabs and MIDI files.
 ---
 
 # PHP Simple Music Parser
@@ -14,10 +15,10 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 ## Read, edit and render the entire tab
 
-- Read, update, write and convert GuitarPro files
+- Read, update, write and convert GuitarPro/MIDI files
 - Access metadata and data
-- Dump data with various formats (JSON, XML, YAML, text, PHP array, serialized)
-- Render a song in VexTab notation
+- Dump data into JSON, XML, YAML and other formats
+- Render a song in VexTab notation (Web)
 
 ------------------------------------------------------------------------
 
@@ -38,11 +39,15 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 - Some use-cases examples:
 
+  - Read and update song metadata (Name, author)
+
   - [Render a track as a VexTab string](/render-as-vextab.html)
 
   - Read measures for a particular track
 
   - Read notes for a particular measure
+
+  - Create a tab from scratch (An empty song)
 
 ------------------------------------------------------------------------
 
