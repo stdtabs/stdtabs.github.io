@@ -10,7 +10,7 @@ permalink: render-as-vextab.html
 VexTab format is supplied by vexflow.com. If you want to know more 
 about VexTab format, there is a [good tutorial](http://www.vexflow.com/vextab/tutorial.html).
 
-PhpTabs can render a track as a VexTab string (Version >= 0.5.0).
+PhpTabs (>= 0.5.0) can render a track as a VexTab string.
 
 ## Quick Usage
 
