@@ -33,7 +33,7 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 - [Getting started](/getting-started.html)
 
-- [Model overview](/api-model-overview.html)
+- [Model overview](/phptabs.html)
 
 - [API Methods]({{ site.github_repository_url }}/blob/master/README.md)
 
