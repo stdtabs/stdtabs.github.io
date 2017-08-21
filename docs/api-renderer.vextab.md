@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: render-as-vextab.html
+title: Render a song as a VexTab string
+excerpt: PhpTabs tutorial for rendering a track as a VexTab string.
 ---
 
 {% include vexflow-js.html %}
@@ -45,11 +47,9 @@ notes | :8 0/5 9/3 7/4 7/3 T7/3 7/4 0/5 5/3
 
 ```
 
-That renders:
+With a bit of VexFlow JS, that renders:
 
 {% include_relative examples/_example01.html %}
-
-With a bit of vexflow JS.
 
 ------------------------------------------------------------------------
 
