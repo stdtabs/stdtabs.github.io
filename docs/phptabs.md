@@ -2,6 +2,7 @@
 layout: default
 permalink: phptabs.html
 title: Music Object Model Overview
+excerpt: How to traverse Music Object Model
 ---
 
 # Music Object Model Overview
@@ -12,65 +13,59 @@ It builds a music-tree which is called the __Music-Object-Model__ (MOM).
 
 ## MOM
 
-- Song:
+__Song__ (= A PhpTabs instance)
 
-  - channels[]:
-    - Channel:
-      - parameters[]
-        - ChannelParameter
+- []__Channel__
+  - parameters[]
+    - ChannelParameter
 
-    [... channels]
+  [... channels]
 
-  - measureHeaders[]
-    - MeasureHeader:
-      - TempoSignature
-      - TimeSignature
-      - Song [parent]
-    
-    [... measureHeaders ]
-  
-  - tracks[]:
-    - Track:
-      - Color
-      - Lyric
-      - measures[]
-        - Measure
-          - beats[]
-            - Beat
-              - Measure [parent]
-              - Stroke
-              - Chord
-              - Text
-              - voices[]
-                - Voice
-                  - Duration
-                  - Beat [parent]
-                  - notes[]
-                    - Note
-                      - Voice [parent]
-                      - NoteEffect
-                        - EffectBend
-                        - EffectGrace
-                        - EffectHarmonic
-                        - EffectTremoloBar
-                        - EffectTremoloPicking
-                        - EffectTrill
-                    
-                    [... notes ]
-                
-                [... voices ]
-          - Marker
-          - MeasureHeader
-          - TimeSignature
-          - Track [parent]
+- []__MeasureHeader__
+  - _Song_ [parent]
+  - Tempo
+  - TimeSignature
+
+  [... measureHeaders ]
+
+- []__Track__
+  - _Song_ [parent]
+  - Color
+  - Lyric
+  - []__Measure__
+    - _Track_ [parent]
+    - Marker
+    - MeasureHeader
+    - TimeSignature
+    - []__Beat__
+      - _Measure_ [parent]
+      - Stroke
+      - Chord
+      - Text
+      - []__Voice__
+        - _Beat_ [parent]
+        - Duration
+        - []__Note__
+          - _Voice_ [parent]
+          - NoteEffect
+            - EffectBend
+            - EffectGrace
+            - EffectHarmonic
+            - EffectTremoloBar
+            - EffectTremoloPicking
+            - EffectTrill
+        
+        [... notes ]
       
-        [... measures ]
+      [... voices ]
 
-      - Song [parent]
-      - strings[]
-        - TabString
+    [... beats ]
 
-    [... tracks ]
+  [... measures ]
+
+  - []TabString
+
+[... tracks ]
 
 ## Traversing the tree is made simple
 
@@ -114,7 +109,7 @@ foreach ($tab->getTracks() as $track) {
     ->getVoice(0)     # Voice 0
     ->getNote(0);     # Note 0
 
-  // Print fret and string numbers
+  // Print track, fret and string numbers
   echo sprintf(
     "\nTrack %d - Note: %s/%d ",
     $track->getNumber(),
@@ -140,14 +135,14 @@ $tab = new PhpTabs('mytab.gp4');
 
 foreach ($tab->getTracks() as $track) {
 
-  foreach ($track->getMeasure(3)->getBeats() as $idxBeat => $beat) {
+  foreach ($track->getMeasure(0)->getBeats() as $idxBeat => $beat) {
 
     // We read a note
     $note = $beat
       ->getVoice(0)     # Voice 0
       ->getNote(0);     # Note 0
 
-    // Print fret and string numbers
+    // Print Track, Beat, fret and string numbers
     echo sprintf(
       "\nTrack %d - Beat %d - Note: %s/%d ",
       $track->getNumber(),
@@ -175,7 +170,7 @@ Track 2 - Beat 4 - Note: 5/2
 Track 2 - Beat 5 - Note: 5/2
 ```
 
-Note the first two beats, they seems to be rest beat.
+Note the first two beats, they must be rest beats.
 
 A short but useful view of the MOM is :
 
@@ -189,7 +184,12 @@ A short but useful view of the MOM is :
 You can traverse it this way:
 
 ```php
-$tab->getTrack(0)->getMeasure(0)->getBeat(0)->getVoice(0)->getNote(0);
+$tab
+  ->getTrack(0)
+  ->getMeasure(0)
+  ->getBeat(0)
+  ->getVoice(0)
+  ->getNote(0);
 ```
 
 ------------------------------------------------------------------------
