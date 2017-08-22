@@ -43,7 +43,7 @@ integer
 #### Examples
 
 
-_[\*&uparrow;\* Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -65,7 +65,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -87,7 +87,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -109,7 +109,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -131,7 +131,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -153,7 +153,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -175,7 +175,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -197,7 +197,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -219,7 +219,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -241,7 +241,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -263,7 +263,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -285,7 +285,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -307,7 +307,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -329,7 +329,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
@@ -351,7 +351,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[^ Table of contents]({{ page.permalink }}#top)_
 
 ------------------------------------------------------------------------
 
