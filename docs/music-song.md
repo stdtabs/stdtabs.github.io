@@ -43,7 +43,7 @@ integer
 #### Examples
 
 
-_[&uparrow; Table of contents]({#top)_
+_[\*&uparrow;\* Table of contents]({#top)_
 
 ------------------------------------------------------------------------
 
