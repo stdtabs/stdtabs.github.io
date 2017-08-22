@@ -16,8 +16,7 @@ It builds a music-tree which is called the __Music-Object-Model__ (MOM).
 __Song__ (= A PhpTabs instance)
 
 - []__Channel__
-  - parameters[]
-    - ChannelParameter
+  - []ChannelParameter
 
   [... channels]
 
