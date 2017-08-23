@@ -405,6 +405,536 @@ integer
 
 ------------------------------------------------------------------------
 
+
+### getName()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setName()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getAlbum()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setAlbum()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getAuthor()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setAuthor()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getArtist()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setArtist()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getDate()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setDate()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getCopyright()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setCopyright()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getWriter()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setWriter()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getTranscriber()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setTranscriber()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getComments()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setComments()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### countChannels()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### countTracks()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### countMeasureHeaders()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### clear()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### isEmpty()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### copyFrom()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+
 ## Updating children
 
 ------------------------------------------------------------------------
