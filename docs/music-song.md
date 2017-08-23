@@ -12,8 +12,8 @@ excerpt: API Music\Song usage
 - [Parent container](#parent-container)
 - [Accessing child nodes](#accessing-child-nodes)
 - [Accessing properties](#accessing-properties)
-- [Update children](#update-children)
-- [Updating properties](#update-properties)
+- [Updating children](#updating-children)
+- [Updating properties](#updating-properties)
 - [Examples](#examples)
 
 ------------------------------------------------------------------------
@@ -40,7 +40,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -62,7 +62,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -84,7 +84,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -106,7 +106,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -128,7 +128,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -150,7 +150,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -172,7 +172,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -194,7 +194,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -216,7 +216,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -238,7 +238,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -260,7 +260,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -282,7 +282,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -304,7 +304,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -326,7 +326,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -348,7 +348,7 @@ integer
 #### Values
 
 
-#### Examples
+#### Example
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
@@ -362,7 +362,7 @@ integer
 
 ------------------------------------------------------------------------
 
-## Update children
+## Updating children
 
 ------------------------------------------------------------------------
 
@@ -375,3 +375,6 @@ integer
 _None_
 
 ------------------------------------------------------------------------
+
+{% capture doc_url %}{{ site.github_doc_repository_url }}/docs/music-song.md{% endcapture %}
+{% include edit-doc-link.html %}
