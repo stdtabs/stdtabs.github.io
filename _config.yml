@@ -11,7 +11,7 @@ description: Parse and write GuitarPro and MIDI files
 
 # Github repositories and download URLs
 github_repository_url: https://github.com/stdtabs/phptabs
-github_doc_repository_url: https://github.com/stdtabs/stdtabs.github.io
+github_doc_repository_url: https://github.com/stdtabs/stdtabs.github.io/blob/master
 github_author_url: https://github.com/landrok
 github_author_name: landrok
 
