@@ -1,11 +1,11 @@
 ---
 layout: default
-excerpt: Read, write, update and render music scores, GuitarPro tabs and MIDI files.
+excerpt: Read, write and render music scores, GuitarPro tabs and MIDI files.
 ---
 
-# PHP Simple Music Parser
+# PHP Simple Music
 
-PhpTabs is a PHP library for reading and writing tabs and MIDI files.
+PhpTabs is a PHP library for reading, writing and rendering tabs and MIDI files.
 
 It provides direct methods to read a song name, get a list of instruments or whatever be your needs.
 
@@ -33,7 +33,8 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 - [Getting started](/getting-started.html)
 
-- [Model overview](/phptabs.html)
+- [Music-Object-Model overview](/phptabs.html)
+  - [Song](/music-song.html)
 
 - [API Methods]({{ site.github_repository_url }}/blob/master/README.md)
 
@@ -59,3 +60,5 @@ You want to write another parser? Please open a pull request.
 
 ------------------------------------------------------------------------
 
+{% capture doc_url %}{{ site.github_doc_repository_url }}/index.md{% endcapture %}
+{% include edit-doc-link.html %}
