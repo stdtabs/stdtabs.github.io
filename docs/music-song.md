@@ -28,14 +28,14 @@ $tab->getSong()->method();
 - [Parent container](#parent-container)
 - [Accessing child nodes](#accessing-child-nodes)
 	- [countMeasureHeaders()](#countmeasureheaders)
-	- [getMeasureHeader()](#getmeasureheader)
+	- [getMeasureHeader()](#getmeasureheaderindex)
 	- [getMeasureHeaders()](#getmeasureheaders)
 	- [countChannels()](#countchannels)
-	- [getChannel()](#getchannel)
-	- [getChannelById()](#getchannelbyid)
+	- [getChannel()](#getchannelindex)
+	- [getChannelById()](#getchannelbyidchannelid)
 	- [getChannels()](#getchannels)
 	- [countTracks()](#counttracks)
-	- [getTrack()](#gettrack)
+	- [getTrack()](#gettrack-index)
 	- [getTracks()](#gettracks)
 
 - [Accessing properties](#accessing-properties)
@@ -89,9 +89,6 @@ Song object has no parent container.
 
 This method returns the number of measures contained by each track.
 
-#### Parameters
-
-_None_
 
 #### Type
 
@@ -114,6 +111,41 @@ echo $tab->countMeasureHeaders();
 
 ------------------------------------------------------------------------
 
+### getMeasureHeader($index)
+
+This method returns a [MeasureHeader](/music-measureheader.html) resource.
+
+#### Parameters
+
+- _integer_ $index 
+
+#### Type
+
+[\PhpTabs\Music\MeasureHeader](/music-measureheader.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get the fourth measure header
+$header = $tab->getMeasureHeader(3);
+
+if ($header !== null) {
+	echo $header->getNumber();
+} else {
+	echo "header number 4 / index 3 is not defined';
+}
+
+```
+
+If the measure header number 4 exists, $header is containing a
+ [MeasureHeader](/music-measureheader.html). Otherwise, it's a null value.
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
 
 ### addMeasureHeader()
 
@@ -138,28 +170,6 @@ integer
 ------------------------------------------------------------------------
 
 ### removeMeasureHeader()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getMeasureHeader()
 
 This method returns.
 
@@ -379,7 +389,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getChannel()
+### getChannel($index)
 
 This method returns.
 
@@ -401,7 +411,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getChannelById()
+### getChannelById($channelId)
 
 This method returns.
 
@@ -442,9 +452,6 @@ integer
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 
 ------------------------------------------------------------------------
 
