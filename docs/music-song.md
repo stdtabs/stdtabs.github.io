@@ -327,6 +327,103 @@ Channel index=1, id=0, volume=65
 
 ------------------------------------------------------------------------
 
+### countTracks()
+
+This method returns the number of tracks contained by the [Song](/music-song.html) resource.
+
+#### Type
+
+integer
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Count tracks
+echo $tab->countTracks();
+
+// Print something like 2 if there is 2 tracks
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getTrack($index)
+
+This method returns a [Track](/music-track.html) resource.
+
+#### Parameters
+
+- _integer_ $index
+
+#### Type
+
+[\PhpTabs\Music\Track](/music-track.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Is the first track using a Piano channel?
+$track = $tab->getTrack(0);
+
+if ($track->getChannelId() == 0) {
+	echo "Yes";
+} else {
+	echo "No;
+}
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getTracks()
+
+This method returns an array of tracks contained by the [Song](/music-song.html) resource.
+
+#### Type
+
+\[\][\PhpTabs\Music\Track](/music-track.html)
+
+#### Example
+
+Let's print the channel id for all tracks
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+foreach($tab->getTracks() as $track) {
+	echo sprintf(
+		"\nTrack %d, channel %d",
+		$track->getNumber(),
+		$track->getChannelId()
+	);
+}
+
+```
+
+will ouput something like:
+
+```
+
+Track 1, channel 28
+Track 2, channel 0
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
 ### addMeasureHeader()
 
 This method returns.
@@ -437,49 +534,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getTrack($index)
 
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getTracks()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
 
 ### addChannel()
 
@@ -950,27 +1005,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### countTracks()
 
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
 
 
 ### clear()
