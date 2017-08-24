@@ -602,58 +602,129 @@ integer
 
 ------------------------------------------------------------------------
 
-
-
 ## Accessing properties
-
-------------------------------------------------------------------------
-
 
 ### getName()
 
-This method returns.
-
-#### Parameters
-
-_None_
+This method returns the name of the song.
 
 #### Type
 
-integer
-
-#### Values
-
+string
 
 #### Example
 
+```php
 
-[_^ Table of contents_]({{ page.permalink }}#top)
+$tab = new PhpTabs('mytabs.gp4');
 
-------------------------------------------------------------------------
+echo $tab->getName();
 
-### setName()
+// Will output "My song name"
 
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
+```
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
 
 ### getAlbum()
+
+This method returns the album of the song.
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getAlbum();
+
+// Will output "My song album name"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getAuthor()
+
+This method returns the author of the song.
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getAuthor();
+
+// Will output "Author name"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getArtist()
+
+This method returns the artist of the song.
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getArtist();
+
+// Will output "Artist name"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getDate()
+
+This method returns the date of the song.
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getDate();
+
+// Will output "12/12/2012"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setName()
 
 This method returns.
 
@@ -697,28 +768,6 @@ integer
 
 ------------------------------------------------------------------------
 
-### getAuthor()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ### setAuthor()
 
 This method returns.
@@ -741,51 +790,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getArtist()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ### setArtist()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getDate()
 
 This method returns.
 
