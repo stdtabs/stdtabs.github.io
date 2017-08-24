@@ -7,6 +7,22 @@ excerpt: API Music\Song usage
 
 # API: Music / Song
 
+Song has a special role. It's the root node of PhpTabs.
+
+You can access its methods by 2 ways:
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Directly
+$tab->method();
+
+// Getting the Song object
+$tab->getSong()->method();
+
+```
+
 ## Table of contents
 
 - [Parent container](#parent-container)
@@ -63,9 +79,40 @@ excerpt: API Music\Song usage
 
 ## Parent container
 
+Song object has no parent container.
+
 ------------------------------------------------------------------------
 
 ## Accessing child nodes
+
+### countMeasureHeaders()
+
+This method returns the number of measures contained by each track.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Count the number of measures
+echo $tab->countMeasureHeaders();
+
+// Will print a number between 0 and n-1
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
 
 
 ### addMeasureHeader()
@@ -846,27 +893,6 @@ integer
 
 ------------------------------------------------------------------------
 
-### countMeasureHeaders()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
 
 ### clear()
 
