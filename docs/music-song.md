@@ -192,6 +192,119 @@ Header number=4, index=3
 
 ------------------------------------------------------------------------
 
+### countChannels()
+
+This method returns the number of channels contained by the [Song](/music-song.html) resource.
+
+#### Type
+
+integer
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Count channels
+echo $tab->countChannels();
+
+// Print something like 4 if there is four types of instruments
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getChannel($index)
+
+This method returns a [Channel](/music-channel.html) resource.
+
+#### Parameters
+
+- _integer_ $index
+
+#### Type
+
+[\PhpTabs\Music\Channel](/music-channel.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get the second channel
+$channel = $tab->getChannel(1);
+
+if ($channel !== null) {
+	echo $channel->getChannelId();
+} else {
+	echo "Channel at index 1 is not defined';
+}
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getChannelById($channelId)
+
+This method returns a [Channel](/music-channel.html) resource.
+
+#### Parameters
+
+- _integer_ $channelId
+
+#### Type
+
+[\PhpTabs\Music\Channel](/music-channel.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Is there any channel using a Piano?
+$channel = $tab->getChannelById(0);
+
+if ($channel !== null) {
+	echo "Yes";
+} else {
+	echo "No;
+}
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getChannels()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
 ### addMeasureHeader()
 
 This method returns.
@@ -412,71 +525,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getChannel($index)
 
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getChannelById($channelId)
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getChannels()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
 
 ## Accessing properties
 
@@ -858,28 +907,6 @@ integer
 ------------------------------------------------------------------------
 
 ### setComments()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### countChannels()
 
 This method returns.
 
