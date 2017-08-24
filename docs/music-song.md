@@ -35,7 +35,7 @@ $tab->getSong()->method();
 	- [getChannelById()](#getchannelbyidchannelid)
 	- [getChannels()](#getchannels)
 	- [countTracks()](#counttracks)
-	- [getTrack()](#gettrack-index)
+	- [getTrack()](#gettrackindex)
 	- [getTracks()](#gettracks)
 
 - [Accessing properties](#accessing-properties)
@@ -147,6 +147,51 @@ If the measure header number 4 exists, $header is containing a
 
 ------------------------------------------------------------------------
 
+### getMeasureHeaders()
+
+This method returns an array of [MeasureHeader](/music-measureheader.html) resources.
+
+These are all measure headers.
+
+#### Type
+
+\[\][\PhpTabs\Music\MeasureHeader](/music-measureheader.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get all measure headers
+$headers = $tab->getMeasureHeaders();
+
+// Print number and index for all measure headers 
+foreach ($headers as $index => $header) {
+	echo sprintf(
+		"\nHeader number=%d, index=%d",
+		$header->getNumber(),
+		$index
+	);
+}
+
+```
+
+will ouput something like:
+
+```
+
+Header number=1, index=0
+Header number=2, index=1
+Header number=3, index=2
+Header number=4, index=3
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
 ### addMeasureHeader()
 
 This method returns.
@@ -170,28 +215,6 @@ integer
 ------------------------------------------------------------------------
 
 ### removeMeasureHeader()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getMeasureHeaders()
 
 This method returns.
 
@@ -279,7 +302,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getTrack()
+### getTrack($index)
 
 This method returns.
 
