@@ -285,21 +285,43 @@ if ($channel !== null) {
 
 ### getChannels()
 
-This method returns.
+This method returns an array of [Channel](/music-channel.html) resources.
 
-#### Parameters
-
-_None_
+These are all channels.
 
 #### Type
 
-integer
-
-#### Values
-
+\[\][\PhpTabs\Music\Channel](/music-channel.html)
 
 #### Example
 
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get all channels
+$channels = $tab->getChannels();
+
+// Print channelId and volume for all channels
+foreach ($channels as $index => $channel) {
+	echo sprintf(
+		"\nChannel index=%d, id=%d, volume=%d",
+		$index,
+		$channel->getChannelId(),
+		$channel->getVolume()
+	);
+}
+
+```
+
+will ouput something like:
+
+```
+
+Channel index=0, id=28, volume=127
+Channel index=1, id=0, volume=65
+
+```
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
