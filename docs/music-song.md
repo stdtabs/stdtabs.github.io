@@ -724,6 +724,130 @@ echo $tab->getDate();
 
 ------------------------------------------------------------------------
 
+### getCopyright()
+
+This method returns the copyright of the song.
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getCopyright();
+
+// Will output a string which represents licensing conditions
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getWriter()
+
+This method returns the writer of the song.
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getWriter();
+
+// Will output "Writer name"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getTranscriber()
+
+This method returns the transcriber of the song.
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getTranscriber();
+
+// Will output "Transcriber name"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getComments()
+
+This method returns comments (multiple lines).
+
+#### Type
+
+string
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+echo $tab->getComments();
+
+// Will output "Comment line 1\nComment line 2"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### isEmpty()
+
+This method returns true if the song has not any measure header or tracks.
+
+Otherwise, it returns false.
+
+#### Type
+
+boolean
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+if ($tab->isEmpty()) {
+  echo "Empty song";
+} else {
+  echo "Song has at least one measure header and one track";
+}
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
 ### setName()
 
 This method returns.
@@ -834,51 +958,8 @@ integer
 
 ------------------------------------------------------------------------
 
-### getCopyright()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
 
 ### setCopyright()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getWriter()
 
 This method returns.
 
@@ -922,51 +1003,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getTranscriber()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ### setTranscriber()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getComments()
 
 This method returns.
 
@@ -1014,28 +1051,6 @@ integer
 
 
 ### clear()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### isEmpty()
 
 This method returns.
 
