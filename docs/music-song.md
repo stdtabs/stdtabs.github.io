@@ -54,7 +54,7 @@ $tab->getSong()->method();
 	- [addTrack()](#addtracktrack)
 	- [moveTrack()](#movetrackindex-track)
 	- [removeTrack()](#removetracktrack)
-	- [addChannel()](#addchannel)
+	- [addChannel()](#addchannelchannel)
 	- [moveChannel()](#movechannel)
 	- [removeChannel()](#removechannel)
 	- [addMeasureHeader()](#addmeasureheader)
@@ -468,28 +468,6 @@ integer
 
 ------------------------------------------------------------------------
 
-
-### addChannel()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
 
 ### moveChannel()
 
@@ -1072,7 +1050,7 @@ $tab->addTrack($track);
 
 ### moveTrack($index, $track)
 
-This method moves a track from its last position to the given index.
+This method moves a [Track](/music-track.html) from its last position to the given index.
 
 #### Parameters
 
@@ -1100,7 +1078,7 @@ $tab->moveTrack($index, $track);
 
 ### removeTrack($track)
 
-This method removes and _clears_ the given track.
+This method removes and _clears_ the given [Track](/music-track.html).
 
 #### Parameters
 
@@ -1117,6 +1095,37 @@ $tab   = new PhpTabs('mytabs.gp4');
 foreach ($tab->getTracks() as $track) {
   $tab->removeTrack($track);
 }
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### addChannel($channel)
+
+This method adds a new [Channel](/music-channel.html) at the end of the stack.
+
+#### Parameters
+
+- [\PhpTabs\Music\Channel](/music-channel.html) $channel
+
+#### Example
+
+In this example, a new channel will be added with default configuration.
+
+```php
+
+use Phptabs\Music\Channel;
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$channel = new Channel();
+$channel->setChannelId(
+  $tab->countChannels() + 1
+);
+
+$tab->addChannel($channel);
 
 ```
 
