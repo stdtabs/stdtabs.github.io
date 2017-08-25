@@ -51,9 +51,9 @@ $tab->getSong()->method();
 	- [isEmpty()](#isempty)
 
 - [Updating children](#updating-children)
-	- [addTrack()](#addtrack)
-	- [moveTrack()](#movetrack)
-	- [removeTrack()](#removetrack)
+	- [addTrack()](#addtracktrack)
+	- [moveTrack()](#movetrackindex-track)
+	- [removeTrack()](#removetracktrack)
 	- [addChannel()](#addchannel)
 	- [moveChannel()](#movechannel)
 	- [removeChannel()](#removechannel)
@@ -467,73 +467,6 @@ integer
 [_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
-
-### addTrack()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### moveTrack()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### removeTrack()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 
 
 ### addChannel()
@@ -1094,8 +1027,100 @@ integer
 
 ------------------------------------------------------------------------
 
-
 ## Updating children
+
+### addTrack($track)
+
+This method adds a new [Track](/music-track.html) at the end of the stack.
+
+#### Parameters
+
+- [\PhpTabs\Music\Track](/music-track.html) $track
+
+#### Example
+
+```php
+
+use PhpTabs\Music\TabString;
+use PhpTabs\Music\Track;
+
+$tab   = new PhpTabs('mytabs.gp4');
+
+$track = new Track();
+
+// Attach a song
+$track->setSong($tab->getSong());
+// Set at the end
+$track->setNumber($tab->countTracks() + 1);
+// Set a name
+$track->setName('My track name');
+
+// Prepare a one-string instrument
+$string = new TabString();
+$string->setNumber(1);
+$string->setValue(34);
+$track->addString($string);
+
+// Add the new track
+$tab->addTrack($track);
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### moveTrack($index, $track)
+
+This method moves a track from its last position to the given index.
+
+#### Parameters
+
+- _integer_ $index
+- [\PhpTabs\Music\Track](/music-track.html) $track
+
+#### Example
+
+In this example, the first track will be put at the last position.
+
+```php
+
+$tab   = new PhpTabs('mytabs.gp4');
+
+$track = $tab->getTrack(0);
+$index = $tab->countTracks() - 1;
+
+$tab->moveTrack($index, $track);
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### removeTrack($track)
+
+This method removes and _clears_ the given track.
+
+#### Parameters
+
+- [\PhpTabs\Music\Track](/music-track.html) $track
+
+#### Example
+
+In this example, all tracks will be removed.
+
+```php
+
+$tab   = new PhpTabs('mytabs.gp4');
+
+foreach ($tab->getTracks() as $track) {
+  $tab->removeTrack($track);
+}
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
 
