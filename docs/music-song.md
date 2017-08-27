@@ -7,22 +7,6 @@ excerpt: API Music\Song usage
 
 # API: Music / Song
 
-Song has a special role. It's the root node of PhpTabs.
-
-You can access its methods by 2 ways:
-
-```php
-
-$tab = new PhpTabs('mytabs.gp4');
-
-// Directly
-$tab->method();
-
-// Getting the Song object
-$tab->getSong()->method();
-
-```
-
 ## Table of contents
 
 - [Parent container](#parent-container)
@@ -71,15 +55,28 @@ $tab->getSong()->method();
 	- [setTranscriber()](#settranscribertranscriber)
 	- [setComments()](#setcommentscomments)
 	- [clear()](#clear)
-	- [copyFrom()](#copyfrom)
-
-- [Examples](#examples)
+	- [copyFrom()](#copyfromsong)
 
 ------------------------------------------------------------------------
 
 ## Parent container
 
-Song object has no parent container.
+As the Song object is the root node of PhpTabs, it has no parent 
+container.
+
+You can access its methods by 2 ways:
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Directly
+$tab->method();
+
+// Getting the Song object
+$tab->getSong()->method();
+
+```
 
 ------------------------------------------------------------------------
 
@@ -1110,56 +1107,45 @@ Etc...');
 
 ------------------------------------------------------------------------
 
-
-
-
 ### clear()
 
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
+This method clears all channels, measure headers and tracks.
 
 #### Example
 
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->clear();
+
+```
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
 
-### copyFrom()
+### copyFrom($song)
 
-This method returns.
+This method converts all data of a given song into internal data.
 
 #### Parameters
 
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
+- [\PhpTabs\Music\Song](/music-song.html) $song
 
 #### Example
 
+In this example, an empty song will replace actual data.
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->copyFrom(new Song());
+
+```
 
 [_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-## Examples
-
-_None_
 
 ------------------------------------------------------------------------
 
