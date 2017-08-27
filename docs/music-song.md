@@ -55,8 +55,8 @@ $tab->getSong()->method();
 	- [moveTrack()](#movetrackindex-track)
 	- [removeTrack()](#removetracktrack)
 	- [addChannel()](#addchannelchannel)
-	- [moveChannel()](#movechannel)
-	- [removeChannel()](#removechannel)
+	- [moveChannel()](#movechannelindex-channel)
+	- [removeChannel()](#removechannelchannel)
 	- [addMeasureHeader()](#addmeasureheader)
 	- [removeMeasureHeader()](#removemeasureheader)
 
@@ -89,10 +89,9 @@ Song object has no parent container.
 
 This method returns the number of measures contained by each track.
 
-
 #### Type
 
-integer
+_integer_
 
 #### Example
 
@@ -447,51 +446,6 @@ integer
 ------------------------------------------------------------------------
 
 ### removeMeasureHeader()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-
-### moveChannel()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### removeChannel()
 
 This method returns.
 
@@ -1132,6 +1086,66 @@ $tab->addChannel($channel);
 [_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
+
+### moveChannel($index, $channel)
+
+This method moves [Channel](/music-channel.html) to an index position.
+
+#### Parameters
+
+- _integer_ $index
+- [\PhpTabs\Music\Channel](/music-channel.html) $channel
+
+#### Example
+
+In this example, the last channel will be moved to the first position.
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get the last defined channel
+$channel = $tab->getChannel(
+  $tab->countChannels() - 1
+);
+
+// Set at the first position
+$tab->moveChannel(0, $channel);
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### removeChannel($channel)
+
+This method removes a [Channel](/music-channel.html).
+
+#### Parameters
+
+- [\PhpTabs\Music\Channel](/music-channel.html) $channel
+
+#### Example
+
+In this example, the first channel will be removed.
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get a channel
+$channel = $tab->getChannel(0);
+
+// Remove it
+$tab->removeChannel($channel);
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
 
 ## Updating properties
 
