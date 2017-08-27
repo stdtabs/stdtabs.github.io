@@ -3,17 +3,19 @@ layout: default
 excerpt: Read, write and render music scores, GuitarPro tabs and MIDI files.
 ---
 
-# PHP Simple Music
-
 PhpTabs is a PHP library for reading, writing and rendering tabs and MIDI files.
 
 It provides direct methods to read a song name, get a list of instruments or whatever be your needs.
 
-- Support for PHP 5.4, 5.5, 5.6, 7.0, 7.1 and HHVM
+- [Features](#features)
+- [Manual](#manual)
+- [Supported formats](#supportedformats)
+- [Requirements](#requirements)
+- [Contribution and Support](#contributionandsupport)
 
 ------------------------------------------------------------------------
 
-## Read, edit and render the entire tab
+## Features
 
 - Read, update, write and convert GuitarPro/MIDI files
 - Access metadata and data
@@ -22,14 +24,7 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 ------------------------------------------------------------------------
 
-## Supported formats
-
-- GuitarPro 3, 4 & 5 (.gp3, .gp4 and .gp5)
-- MIDI files (.mid, .midi)
-
-------------------------------------------------------------------------
-
-## Documentation
+## Manual
 
 - [Getting started](/getting-started.html)
 
@@ -48,6 +43,19 @@ It provides direct methods to read a song name, get a list of instruments or wha
   - Read notes for a particular measure
 
   - Create a tab from scratch (An empty song)
+
+------------------------------------------------------------------------
+
+## Supported formats
+
+- GuitarPro 3, 4 & 5 (.gp3, .gp4 and .gp5)
+- MIDI files (.mid, .midi)
+
+------------------------------------------------------------------------
+
+## Requirements
+
+Support for PHP 5.4, 5.5, 5.6, 7.0, 7.1 and HHVM
 
 ------------------------------------------------------------------------
 
