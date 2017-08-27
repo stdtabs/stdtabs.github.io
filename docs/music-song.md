@@ -61,15 +61,15 @@ $tab->getSong()->method();
 	- [removeMeasureHeader()](#removemeasureheaderindex)
 
 - [Updating properties](#updating-properties)
-	- [setName()](#setname)
-	- [setAlbum()](#setalbum)
-	- [setAuthor()](#setauthor)
-	- [setArtist()](#setartist)
-	- [setDate()](#setdate)
-	- [setCopyright()](#setcopyright)
-	- [setWriter()](#setwriter)
-	- [setTranscriber()](#settranscriber)
-	- [setComments()](#setcomments)
+	- [setName()](#setnamename)
+	- [setAlbum()](#setalbumalbum)
+	- [setAuthor()](#setauthorauthor)
+	- [setArtist()](#setartistartist)
+	- [setDate()](#setdatedate)
+	- [setCopyright()](#setcopyrightcopyright)
+	- [setWriter()](#setwriterwriter)
+	- [setTranscriber()](#settranscribertranscriber)
+	- [setComments()](#setcommentscomments)
 	- [clear()](#clear)
 	- [copyFrom()](#copyfrom)
 
@@ -669,252 +669,6 @@ if ($tab->isEmpty()) {
 
 ------------------------------------------------------------------------
 
-### setName()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### setAlbum()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### setAuthor()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### setArtist()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### setDate()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-
-### setCopyright()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### setWriter()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### setTranscriber()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### setComments()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-
-
-
-### clear()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### copyFrom()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ## Updating children
 
 ### addTrack($track)
@@ -1155,6 +909,251 @@ $tab->removeMeasureHeader(0);
 ------------------------------------------------------------------------
 
 ## Updating properties
+
+### setName($name)
+
+This method sets the name attribute.
+
+#### Parameters
+
+- _string_ $name
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setName('My new song title');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setAlbum($album)
+
+This method sets the album attribute.
+
+#### Parameters
+
+- _string_ $album
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setAlbum('My new album title');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setAuthor($author)
+
+This method sets the author attribute.
+
+#### Parameters
+
+- _string_ $author
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setAuthor('My new author name');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setArtist($artist)
+
+This method sets the artist attribute.
+
+#### Parameters
+
+- _string_ $artist
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setArtist('My new artist name');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setDate($date)
+
+This method sets the date attribute.
+
+#### Parameters
+
+- _string_ $date
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setDate('12/12/2012');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setCopyright($copyright)
+
+This method sets the copyright attribute.
+
+#### Parameters
+
+- _string_ $copyright
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setCopyright('License LGPL2.1+');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setWriter($writer)
+
+This method sets the writer attribute.
+
+#### Parameters
+
+- _string_ $writer
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setWriter('Writer name');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setTranscriber($transcriber)
+
+This method sets the transcriber attribute.
+
+#### Parameters
+
+- _string_ $transcriber
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setTranscriber('Transcriber name');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### setComments($comments)
+
+This method sets the comments attribute.
+
+#### Parameters
+
+- _string_ $comments
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->setComments('Comment line 1
+Comment line 2
+Etc...');
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+
+
+
+### clear()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### copyFrom()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
+
+[_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
 
