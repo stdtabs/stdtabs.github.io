@@ -9,9 +9,9 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 - [Features](#features)
 - [Manual](#manual)
-- [Supported formats](#supportedformats)
+- [Supported formats](#supported-formats)
 - [Requirements](#requirements)
-- [Contribution and Support](#contributionandsupport)
+- [Contribution and Support](#contribution-and-support)
 
 ------------------------------------------------------------------------
 
@@ -48,7 +48,9 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 ## Supported formats
 
-- GuitarPro 3, 4 & 5 (.gp3, .gp4 and .gp5)
+- GuitarPro 3 (.gp3)
+- GuitarPro 4 (.gp4)
+- GuitarPro 5 (.gp5)
 - MIDI files (.mid, .midi)
 
 ------------------------------------------------------------------------
