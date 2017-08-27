@@ -13,7 +13,7 @@ It builds a music-tree which is called the __Music-Object-Model__ (MOM).
 
 ## MOM
 
-__Song__ (= A PhpTabs instance)
+[__Song__](music-song.html#top) (= A PhpTabs instance)
 
 - []__Channel__
   - []ChannelParameter
@@ -21,18 +21,18 @@ __Song__ (= A PhpTabs instance)
   [... channels]
 
 - []__MeasureHeader__
-  - _Song_ [parent]
+  - [_Song_](music-song.html#top) [parent]
   - Tempo
   - TimeSignature
 
   [... measureHeaders ]
 
-- []__Track__
-  - _Song_ [parent]
+- [][__Track__](music-track.html#top)
+  - [_Song_](music-song.html#top) [parent]
   - Color
   - Lyric
   - []__Measure__
-    - _Track_ [parent]
+    - [_Track_](music-track.html#top) [parent]
     - Marker
     - MeasureHeader
     - TimeSignature
@@ -173,8 +173,8 @@ Note the first two beats, they must be rest beats.
 
 A short but useful view of the MOM is :
 
-- PhpTabs
-  - Track
+- [Song](music-song.html#top)
+  - [Track](music-track.html#top)
     - Measure
       - Beat
         - Voice
