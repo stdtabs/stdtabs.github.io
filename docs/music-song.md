@@ -57,8 +57,8 @@ $tab->getSong()->method();
 	- [addChannel()](#addchannelchannel)
 	- [moveChannel()](#movechannelindex-channel)
 	- [removeChannel()](#removechannelchannel)
-	- [addMeasureHeader()](#addmeasureheader)
-	- [removeMeasureHeader()](#removemeasureheader)
+	- [addMeasureHeader()](#addmeasureheadermeasureheader)
+	- [removeMeasureHeader()](#removemeasureheaderindex)
 
 - [Updating properties](#updating-properties)
 	- [setName()](#setname)
@@ -418,50 +418,6 @@ Track 1, channel 28
 Track 2, channel 0
 
 ```
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### addMeasureHeader()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### removeMeasureHeader()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
@@ -1146,6 +1102,57 @@ $tab->removeChannel($channel);
 
 ------------------------------------------------------------------------
 
+### addMeasureHeader($measureHeader)
+
+This method adds a new measure header at the end of the stack.
+
+#### Parameters
+
+- [\PhpTabs\Music\MeasureHeader](/music-measureheader.html) $measureHeader
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$measureHeader = new MeasureHeader();
+$measureHeader->setNumber(
+  $tab->countMeasureHeaders()
+);
+
+// Add the new header
+$tab->addMeasureHeader($measureHeader);
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### removeMeasureHeader($index)
+
+This method removes a [MeasureHeader](/music-measureheader.html) at given index.
+
+#### Parameters
+
+- _int_ $index
+
+#### Example
+
+In this example, the first measure header will be removed.
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$tab->removeMeasureHeader(0);
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
 
 ## Updating properties
 
