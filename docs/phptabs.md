@@ -272,3 +272,6 @@ echo $song->getTrack(0)->countMeasures() . PHP_EOL;
 ```
 
 ------------------------------------------------------------------------
+
+{% capture doc_url %}{{ site.github_doc_repository_url }}/docs/phptabs.md{% endcapture %}
+{% include edit-doc-link.html %}
