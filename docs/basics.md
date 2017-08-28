@@ -198,15 +198,15 @@ Planned for 0.5.0 (testable in the master branch)
 
 Render is made in 2 steps:
 
-- get a renderer with `getRenderer($type)`
+1. __Get a specific renderer with `getRenderer($type)`__
+  
+    Following renderer types are allowed:
 
-Following renderer are allowed:
+    | Parameter      | Type      | Description             |
+    |:---------------|:----------|:------------------------|
+    | vextab         | *string*  | A vextab string         |
 
-| Parameter        | Type      | Description                  |
-|:-----------------|:----------|:-----------------------------|
-| vextab           | *string*  | a vextab string              |
-
-- get a string with `render()` method
+2. __Render as string with `render()` method__
 
 #### Example
 
@@ -217,13 +217,30 @@ Then, render all tracks.
 
 $tab = new PhpTabs('mytabs.gp4');
 
-// Get a vextab renderer instance
+// Get a vextab renderer
 $renderer = $tab->getRenderer('vextab');
 
 // Render all tracks one-by-one
 for ($i = 0; $i < $tab->countTracks(); $i++) {
 
   echo $renderer->render($i);
+
+}
+
+```
+
+It's easy to make the same thing with one line.
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Render all tracks one-by-one
+for ($i = 0; $i < $tab->countTracks(); $i++) {
+
+  echo $tab
+    ->getRenderer('vextab')
+    ->render($i);
 
 }
 
@@ -240,37 +257,37 @@ for ($i = 0; $i < $tab->countTracks(); $i++) {
 
 ### Component schema
 
-```
-                     Reader                  Writer
-                               ------------ 
- ------------------           |            |            ------------------
-| Guitar Pro files | -------> | Internal   | -------> | Guitar Pro files |
- ------------------           |            |            ------------------
- ------------------           |            |            ------------------
-| MIDI files       | -------> |            | -------> | MIDI files       |
- ------------------           | Music      |            ------------------
-                              |            | 
-                              |            | Renderer
-                              |            |           ------------------
-                              | Model      | -------> | VexTab           |
-                              |            |           ------------------
-                              |            | 
-                     Importer |            | Dumper
-  -----------------           |            |           ------------------
- | PHP array       | -------> |            | -------> | PHP array        |
-  -----------------           |            |           ------------------
-  -----------------           |            |           ------------------
- | XML             | -------> |            | -------> | XML              |
-  -----------------           |            |           ------------------
-  -----------------           |            |           ------------------
- | YAML            | -------> |            | -------> | YAML             |
-  -----------------           |            |           ------------------
-  -----------------           |            |           ------------------
- | JSON            | -------> |            | -------> | JSON             |
-  -----------------           |            |           ------------------
-                               ------------ 
-                                \          \
-                                 ------------
+```shell
+                                      
+                    Reader    ------------  Writer
+ ------------------          |            |          ------------------
+| Guitar Pro files | ------> | Internal   | ------> | Guitar Pro files |
+ ------------------          |            |          ------------------
+ ------------------          |            |          ------------------
+| MIDI files       | ------> |            | ------> | MIDI files       |
+ ------------------          | Music      |          ------------------
+                             |            | 
+                             |            | Renderer
+                             |            |          ------------------
+                             | Model      | ------> | VexTab           |
+                             |            |          ------------------
+                             |            | 
+                    Importer |            | Dumper
+  -----------------          |            |          ------------------
+ | PHP array       | ------> |            | ------> | PHP array        |
+  -----------------          |            |          ------------------
+  -----------------          |            |          ------------------
+ | XML             | ------> |            | ------> | XML              |
+  -----------------          |            |          ------------------
+  -----------------          |            |          ------------------
+ | YAML            | ------> |            | ------> | YAML             |
+  -----------------          |            |          ------------------
+  -----------------          |            |          ------------------
+ | JSON            | ------> |            | ------> | JSON             |
+  -----------------          |            |          ------------------
+                              ------------ 
+                               \          \
+                                ------------
 ```                                
 
 ### Component roles
