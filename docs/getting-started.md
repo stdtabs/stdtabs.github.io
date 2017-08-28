@@ -28,3 +28,6 @@ echo $song->getName();
 ```
 
 ------------------------------------------------------------------------
+
+{% capture doc_url %}{{ site.github_doc_repository_url }}/docs/getting-started.md{% endcapture %}
+{% include edit-doc-link.html %}
