@@ -12,7 +12,7 @@ excerpt: API Music\Track usage
 - [Parent container](#parent-container)
 - [Accessing child nodes](#accessing-child-nodes)
 	- [countMeasures()](#countmeasures)
-	- [getMeasure()](#getmeasure)
+	- [getMeasure()](#getmeasureindex)
 	- [getMeasures()](#getmeasures)
 	- [countStrings()](#countstrings)
 	- [getString()](#getstring)
@@ -24,7 +24,6 @@ excerpt: API Music\Track usage
 	- [getColor()](#getcolor)
 	- [getName()](#getname)
 	- [getOffset()](#getoffset)
-	- [setOffset()](#setoffset)
 	- [isSolo()](#issolo)
 	- [isMute()](#ismute)
 	- [getChannelId()](#getchannelid)
@@ -41,6 +40,7 @@ excerpt: API Music\Track usage
 	- [setNumber()](#setnumber)
 	- [setColor()](#setcolor)
 	- [setName()](#setname)
+	- [setOffset()](#setoffset)
 	- [setSolo()](#setsolo)
 	- [setMute()](#setmute)
 	- [setChannelId()](#setchannelid)
@@ -80,6 +80,83 @@ $track = $tab->getTrack(0);
 echo $track->countMeasures();
 
 // Will print a number between 0 and n-1
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getMeasure($index)
+
+This method returns a [Measure](/music-measure.html) resource.
+
+#### Parameters
+
+_ _integer_ $index
+
+#### Type
+
+[\PhpTabs\Music\Measure](/music-measure.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get first measure
+$measure = $tab->getTrack(0)->getMeasure(0);
+
+// Print the measure id
+echo $measure->getNumber();
+
+// Will print "1"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getMeasures()
+
+This method returns an array of [Measure](/music-measure.html) resources.
+
+These are all measures contained in the current track.
+
+#### Type
+
+\[\][\PhpTabs\Music\Measure](/music-measure.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get all measures
+$measures = $tab->getTrack(0)->getMeasures();
+
+// Print all measure ids
+foreach ($measures as $index => $measure) {
+	echo sprintf(
+		"\Measure number=%d, index=%d",
+		$measure->getNumber(),
+		$index
+	);
+}
+
+```
+
+will ouput something like:
+
+```
+
+Measure number=1, index=0
+Measure number=2, index=1
+Measure number=3, index=2
+Measure number=4, index=3
 
 ```
 
@@ -131,51 +208,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getMeasures()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ### addMeasure()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getMeasure()
 
 This method returns.
 
@@ -722,9 +755,6 @@ integer
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 
 ------------------------------------------------------------------------
 
