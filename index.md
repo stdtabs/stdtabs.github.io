@@ -17,10 +17,10 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 ## Features
 
-- Read, update, write and convert GuitarPro/MIDI files
-- Access metadata and data
-- Dump data into JSON, XML, YAML and other formats
-- Render a song in VexTab notation (Web)
+- Read, convert and write GuitarPro/MIDI files
+- Traverse and CRUD metadata and data
+- Dump data to JSON, XML, YAML and other formats
+- Web-rendering in VexTab notation
 
 ------------------------------------------------------------------------
 
@@ -28,9 +28,17 @@ It provides direct methods to read a song name, get a list of instruments or wha
 
 - [Getting started](/getting-started.html)
 
-- [Music-Object-Model overview](/phptabs.html)
-  - [Song](/music-song.html)
-    - [Track](/music-track.html)
+- [Basics](basics.html)
+  - [Read a file](basics.html#read-from-a-file)
+  - [Save to a file](basics.html#save-to-a-file)
+  - [Dump and Import](basics.html#dump-and-import)
+  - [Render](basics.html#render)
+  - [Architecture](basics.html#architecture)
+  - [Traversing](basics.html#accessing-data)
+
+- [Music-Object-Model overview](phptabs.html)
+  - [Song](music-song.html)
+    - [Track](music-track.html)
 
 - Some use-cases examples:
 
