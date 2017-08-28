@@ -15,7 +15,7 @@ excerpt: API Music\Track usage
 	- [getMeasure()](#getmeasureindex)
 	- [getMeasures()](#getmeasures)
 	- [countStrings()](#countstrings)
-	- [getString()](#getstring)
+	- [getString()](#getstringindex)
 	- [getStrings()](#getstrings)
 
 - [Accessing properties](#accessing-properties)
@@ -93,7 +93,7 @@ This method returns a [Measure](/music-measure.html) resource.
 
 #### Parameters
 
-_ _integer_ $index
+- _integer_ $index
 
 #### Type
 
@@ -159,6 +159,87 @@ Measure number=3, index=2
 Measure number=4, index=3
 
 ```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### countStrings()
+
+This method returns the number of strings.
+
+#### Type
+
+_integer_
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+$track = $tab->getTrack(0);
+
+// Count the number of strings
+echo $track->countStrings();
+
+// Will print something like 6
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getString($index)
+
+This method returns a [TabString](/music-tabstring.html) resource.
+
+#### Parameters
+
+- _integer_ $index
+
+#### Type
+
+[\PhpTabs\Music\TabString](/music-tabstring.html)
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get the first string
+$string = $tab->getTrack(0)->getString(0);
+
+// Print string value
+echo $track->getValue();
+
+// Will print something like "34"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getStrings()
+
+This method returns.
+
+#### Parameters
+
+_None_
+
+#### Type
+
+integer
+
+#### Values
+
+
+#### Example
+
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
@@ -231,28 +312,6 @@ integer
 ------------------------------------------------------------------------
 
 ### removeMeasure()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getStrings()
 
 This method returns.
 
@@ -605,50 +664,6 @@ integer
 ------------------------------------------------------------------------
 
 ### setLyrics()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getString()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### countStrings()
 
 This method returns.
 
