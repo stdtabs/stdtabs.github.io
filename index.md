@@ -34,7 +34,7 @@ It provides direct methods to read a song name, get a list of instruments or wha
   - [Dump and Import](basics.html#dump-and-import)
   - [Render](basics.html#render)
   - [Architecture](basics.html#architecture)
-  - [Traversing](basics.html#accessing-data)
+  - [Traversing](basics.html#traversing)
 
 - [Music-Object-Model overview](phptabs.html)
   - [Song](music-song.html)

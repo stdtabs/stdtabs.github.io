@@ -257,6 +257,8 @@ for ($i = 0; $i < $tab->countTracks(); $i++) {
 
 ### Component schema
 
+{% include_relative basics/architecture-schema.html %}
+
 ```shell
                                       
                     Reader    ------------  Writer
@@ -304,7 +306,7 @@ With the internal model, you can easily convert files from one type to another.
 
 ------------------------------------------------------------------------
 
-## Traversing Internal Model
+## Traversing
 
 Accessing data is made by getter/setter methods.
 
