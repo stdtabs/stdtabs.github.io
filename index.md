@@ -31,7 +31,7 @@ It provides direct methods to read a song name, get a list of instruments or wha
 - [Basics](basics.html)
   - [Read a file](basics.html#read-from-a-file)
   - [Save to a file](basics.html#save-to-a-file)
-  - [Dump and Import](basics.html#dump-and-import)
+  - [Dump and Import](basics.html#dump-and-import-data)
   - [Render](basics.html#render)
   - [Architecture](basics.html#architecture)
   - [Traversing](basics.html#traversing)
