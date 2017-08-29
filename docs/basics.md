@@ -13,12 +13,12 @@ excerpt: All documentation for basic PhpTabs features.
   - [Read from a file](#read-from-a-file)
   - [Save to a file](#save-to-a-file)
   - [Convert](#convert)
-  - [Dump and Import](#dump-and-import)
+  - [Dump and Import](#dump-and-import-data)
   - [Render](#render)
 
 - [Architecture](#architecture)
 
-- [Traversing](#accessing-data)
+- [Traversing](#traversing)
   - How to access tracks, measures, beats and notes?
   - Getter rules
 
