@@ -133,7 +133,7 @@ After data has been dumped, it's possible to import it with import methods.
 
 #### dump($format)
 
-__Type__ *string|array*
+__Type__ *string\|array*
 
 __Parameter__ *string* $format 
 
