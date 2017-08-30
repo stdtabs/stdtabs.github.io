@@ -5,9 +5,9 @@ excerpt: Read, write and render music scores, Guitar Pro tabs and MIDI files.
 
 PhpTabs is a PHP library for reading, writing and rendering tabs and MIDI files.
 
-It provides direct methods to read a song name, get a list of instruments or whatever be your needs.
+It provides direct methods to [read a song name](music-song.html#getname), get a list of instruments or whatever be your needs.
 
-Phptabs is built on the top of a music stack that lets you create or modify your songs.
+Phptabs is built on the top of a [music stack](phptabs.html) that lets you create or modify your songs.
 
 - [Features](#features)
 - [Manual](#manual)
@@ -20,9 +20,9 @@ Phptabs is built on the top of a music stack that lets you create or modify your
 
 ## Features
 
-- Read, convert and write GuitarPro/MIDI files
+- [Read](basics.html#read-from-a-file), [convert](basics.html#convert) and [write](basics.html#save-to-a-file) GuitarPro/MIDI files
 - Traverse and CRUD metadata and data
-- Dump data to JSON, XML, YAML and other formats
+- [Dump](basics.html#dump-and-import-data) data to JSON, XML, YAML and other formats
 - Web-rendering in [VexTab notation](render-as-vextab.html)
 
 ------------------------------------------------------------------------
@@ -48,7 +48,7 @@ Phptabs is built on the top of a music stack that lets you create or modify your
 
   - Read and update song metadata (Name, author)
 
-  - [Render a track as a VexTab string](/render-as-vextab.html)
+  - [Render a track as a VexTab string](render-as-vextab.html)
 
   - Read measures for a particular track
 
