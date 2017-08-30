@@ -20,15 +20,15 @@ excerpt: API Music\Track usage
 
 - [Accessing properties](#accessing-properties)
 	- [getSong()](#getsong)
-	- [getNumber()](#getnumber)
-	- [getColor()](#getcolor)
 	- [getName()](#getname)
+	- [getChannelId()](#getchannelid)
+	- [getNumber()](#getnumber)
+	- [getLyrics()](#getlyrics)
+	- [getColor()](#getcolor)
 	- [getOffset()](#getoffset)
 	- [isSolo()](#issolo)
 	- [isMute()](#ismute)
-	- [getChannelId()](#getchannelid)
-	- [getLyrics()](#getlyrics)
-  
+
 - [Updating children](#updating-children)
 	- [addMeasure()](#addmeasure)
 	- [removeMeasure()](#removemeasure)
@@ -37,14 +37,14 @@ excerpt: API Music\Track usage
 
 - [Updating properties](#updating-properties)
 	- [setSong()](#setsong)
-	- [setNumber()](#setnumber)
-	- [setColor()](#setcolor)
 	- [setName()](#setname)
+	- [setChannelId()](#setchannelid)
+	- [setNumber()](#setnumber)
+	- [setLyrics()](#setlyrics)
+	- [setColor()](#setcolor)
 	- [setOffset()](#setoffset)
 	- [setSolo()](#setsolo)
 	- [setMute()](#setmute)
-	- [setChannelId()](#setchannelid)
-	- [setLyrics()](#setlyrics)
 	- [clear()](#clear)
 	- [copyFrom()](#copyfrom)
 
@@ -271,28 +271,6 @@ String index=5, number=6, value=40
 
 ------------------------------------------------------------------------
 
-### getNumber()
-
-This method returns the number identifier of the track.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ### setNumber()
 
 This method returns.
@@ -426,28 +404,6 @@ integer
 ------------------------------------------------------------------------
 
 ### setColor()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getName()
 
 This method returns.
 
@@ -623,51 +579,7 @@ integer
 
 ------------------------------------------------------------------------
 
-### getChannelId()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ### setChannelId()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### getLyrics()
 
 This method returns.
 
@@ -801,6 +713,120 @@ echo $track->getSong()->getName();
 // Will ouput "My song name"
 
 ```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getName()
+
+This method returns the name of the track.
+
+#### Type
+
+_string_
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get the first track
+$track = $tab->getTrack(0);
+
+// Print track name
+echo $track->getName();
+
+```
+
+will ouput something like:
+
+```
+My track name
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getChannelId()
+
+This method returns the channel identifier for this track.
+
+#### Type
+
+_integer_
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get the first track
+$track = $tab->getTrack(0);
+
+// Print the channel id
+echo $track->getChannelId();
+
+```
+
+will ouput something like:
+
+```
+1
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getNumber()
+
+This method returns the number identifier of the track.
+
+#### Type
+
+_integer_
+
+#### Example
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get the first track
+$track = $tab->getTrack(0);
+
+// Print the channel id
+echo $track->getNumber();
+
+```
+
+will ouput something like:
+
+```
+1
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### getLyrics()
+
+This method returns a [Lyric](music-lyric.html) resource.
+
+#### Type
+
+[\PhpTabs\Music\Lyric](music-lyric.html)
+
+#### Example
+
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
