@@ -20,7 +20,7 @@ It provides direct methods to read a song name, get a list of instruments or wha
 - Read, convert and write GuitarPro/MIDI files
 - Traverse and CRUD metadata and data
 - Dump data to JSON, XML, YAML and other formats
-- Web-rendering in VexTab notation
+- Web-rendering in [VexTab notation](render-as-vextab.html)
 
 ------------------------------------------------------------------------
 
@@ -35,6 +35,7 @@ It provides direct methods to read a song name, get a list of instruments or wha
   - [Render](basics.html#render)
   - [Architecture](basics.html#architecture)
   - [Traversing](basics.html#traversing)
+
 
 - [Music-Object-Model overview](phptabs.html)
   - [Song](music-song.html)
@@ -55,6 +56,8 @@ It provides direct methods to read a song name, get a list of instruments or wha
 ------------------------------------------------------------------------
 
 ## Supported formats
+
+PhpTabs currently supports the following file formats:
 
 - GuitarPro 3 (.gp3)
 - GuitarPro 4 (.gp4)
