@@ -9,7 +9,9 @@ excerpt: How to traverse Music Object Model
 
 PhpTabs makes a song fully-traversable.
 
-It builds a music-tree which is called the __Music-Object-Model__ (MOM).
+It builds a musical tree which is called the __Music-Object-Model__ (MOM).
+
+------------------------------------------------------------------------
 
 ## MOM
 
@@ -66,6 +68,8 @@ It builds a music-tree which is called the __Music-Object-Model__ (MOM).
 
 [... tracks ]
 
+------------------------------------------------------------------------
+
 ## Traversing the tree is made simple
 
 In this example, we read the fret value and string number, for the first
@@ -91,6 +95,12 @@ echo sprintf(
   $note->getString()
 );
 
+```
+
+It will ouput something like:
+
+```
+Note: 13/2 
 ```
 
 Below, we make the same thing, for all tracks.
