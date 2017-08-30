@@ -141,7 +141,7 @@ $measures = $tab->getTrack(0)->getMeasures();
 // Print all measure ids
 foreach ($measures as $index => $measure) {
 	echo sprintf(
-		"\Measure number=%d, index=%d",
+		"\nMeasure number=%d, index=%d",
 		$measure->getNumber(),
 		$index
 	);
@@ -225,21 +225,47 @@ echo $track->getValue();
 
 ### getStrings()
 
-This method returns.
+This method returns an array of [TabString](/music-tabstring.html) resources.
 
-#### Parameters
-
-_None_
+These are all configured strings for the current track.
 
 #### Type
 
-integer
-
-#### Values
-
+\[\][\PhpTabs\Music\TabString](/music-tabstring.html)
 
 #### Example
 
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Get all strings
+$strings = $tab->getTrack(0)->getStrings();
+
+// Print all strings data
+foreach ($strings as $index => $string) {
+	echo sprintf(
+		"\nString index=%d, number=%d, value=%d",
+		$index,
+    $string->getNumber(),
+    $string->getValue()
+	);
+}
+
+```
+
+will ouput something like:
+
+```
+
+String index=0, number=1, value=64
+String index=1, number=2, value=59
+String index=2, number=3, value=55
+String index=3, number=4, value=50
+String index=4, number=5, value=45
+String index=5, number=6, value=40
+
+```
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
@@ -685,28 +711,6 @@ integer
 
 ------------------------------------------------------------------------
 
-### getSong()
-
-This method returns.
-
-#### Parameters
-
-_None_
-
-#### Type
-
-integer
-
-#### Values
-
-
-#### Example
-
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
 ### setSong()
 
 This method returns.
@@ -774,6 +778,31 @@ integer
 ------------------------------------------------------------------------
 
 ## Accessing properties
+
+### getSong()
+
+This method returns the parent [Song](music-song.html).
+
+#### Type
+
+[\PhpTabs\Music\Song](music-song.html)
+
+#### Example
+
+```php
+
+$tab = new Phptabs('mytab.gp4');
+
+$track = $tab->getTrack(0);
+
+// Print song name
+echo $track->getSong()->getName();
+
+// Will ouput "My song name"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
 

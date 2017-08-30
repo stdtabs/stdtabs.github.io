@@ -61,7 +61,7 @@ excerpt: API Music\Song usage
 
 ## Parent container
 
-As the Song object is the root node of PhpTabs, it has no parent 
+As the Song object is the root node of [PhpTabs](phptabs.html), it has no parent 
 container.
 
 You can access its methods by 2 ways:
