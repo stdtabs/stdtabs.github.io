@@ -12,11 +12,11 @@ excerpt: PhpTabs tutorial for rendering a track as a VexTab string.
 VexTab format is supplied by vexflow.com. If you want to know more 
 about VexTab format, there is a [good tutorial](http://www.vexflow.com/vextab/tutorial.html).
 
-PhpTabs (>= 0.5.0) can render a track as a VexTab string.
+PhpTabs (>= 0.5.0) can [render](basics.html#render) a track as a VexTab string.
 
 ## Quick Usage
 
-Print all tabstaves of the first track.
+The following code prints all tabstaves of the first track.
 
 ```php
 
@@ -33,10 +33,10 @@ echo $tab
 
 ```
 
-Note that the render() method takes a track index as parameter.
+The [render()](basics.html#render) method takes a track index as parameter.
 It starts from 0 for the first track.
 
-Example will ouput something like:
+This example will ouput something like:
 
 ```
 options scale=1 space=16 width=520 tempo=66
