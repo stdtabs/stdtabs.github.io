@@ -275,9 +275,24 @@ With the internal model, you can easily convert files from one type to another.
 
 ## Traversing
 
-Accessing data is made by getter/setter methods.
-
 Starting from one point, you can find your way with the [Music-Object-Model reference](phptabs.html#top).
+
+Traversing data is made by getter/setter/counter methods.
+
+A traversal is done in read-write mode
+
+There are 4 rules for getter names:
+
+1. get + {objectName} + ()
+
+	It's a property getter. ie: there can be only one tempo per MeasureHeader, 
+	so the method name to get the tempo for a given measure is [$header->getTempo()](music-measureheader.html#gettempo).
+
+2. get + {objectName} + ($index)
+3. get + {objectName} + s()
+4. count + {objectName} + s()
+
+When in doubt, reference should be made to the [Music-Object-Model reference](phptabs.html#top).
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
