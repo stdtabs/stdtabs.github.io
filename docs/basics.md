@@ -19,8 +19,9 @@ excerpt: All documentation for basic PhpTabs features.
 - [Architecture](#architecture)
 
 - [Traversing](#traversing)
-  - How to access tracks, measures, beats and notes?
-  - Getter rules
+  - [Getter/setter/counter rules](#getter-setter-counter-rules)
+  - [Traversing, a naive example](traversing-a-naive-example)
+  - Traversing, real world example
 
 ------------------------------------------------------------------------
 
@@ -281,18 +282,105 @@ Traversing data is made by getter/setter/counter methods.
 
 A traversal is done in read-write mode
 
+### Getter/setter/counter rules
+
 There are 4 rules for getter names:
 
-1. get + {objectName} + ()
+1. __get + {objectName} + ()__
 
-	It's a property getter. ie: there can be only one tempo per MeasureHeader, 
+	It's a __property getter__ method.
+  ie: there can be only one Tempo per MeasureHeader, 
 	so the method name to get the tempo for a given measure is [$header->getTempo()](music-measureheader.html#gettempo).
 
-2. get + {objectName} + ($index)
-3. get + {objectName} + s()
-4. count + {objectName} + s()
+2. __count + {objectName} + s()__
+
+	It's a __child nodes counter__ method.
+  ie: there can be several measures per Track,
+  so the method name to count them is [$track->countMeasures()](music-track.html#countmeasures).
+  
+3. __get + {objectName} + s()__
+
+	It's a __child-nodes getter__ method, it returns an array with all child-nodes. 
+  ie: there can be several measures per Track,
+  so the method name to get them is [$track->getMeasures()](music-track.html#getmeasures).
+
+4. __get + {objectName} + ($index)__
+
+	It's a child-node getter by index, it returns one child resource.
+  `$index` is starting from 0 to n-1, with n=child count (returned by the counter method)
+  ie: there can be several measures per Track,
+  so the method name to get one measure(the first) is [$track->getMeasure(0)](music-track.html#getmeasureindex).
 
 When in doubt, reference should be made to the [Music-Object-Model reference](phptabs.html#top).
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+### Traversing, a naive example
+
+In the following example, all notes will be printed.
+
+```php
+
+$tab = new PhpTabs('mytab.gp4');
+
+# Get all tracks
+foreach ($tab->getTracks() as $track)
+  # Get all measures
+  foreach ($track->getMeasures() as $measure)
+    # Get all beats
+    foreach ($measure->getBeats() as $beat)
+      # Get all voices
+      foreach ($beat->getVoices() as $voice)
+        # Get all notes
+        foreach ($voice->getNotes() as $note)
+          
+          printNote($note);
+
+
+/**
+ * Print all referential
+ *
+ * @param \PhpTabs\Music\Note $note
+ */
+function printNote($note)
+{
+  echo sprintf(
+    "\nTrack %d - Measure %d - Beat %d - Voice %d - Note %s/%s",
+    $note->getVoice()->getBeat()->getMeasure()->getTrack()->getNumber(),
+    $note->getVoice()->getBeat()->getMeasure()->getNumber(),
+    $note->getVoice()->getBeat()->getStart(),
+    $note->getVoice()->getIndex(),
+    $note->getValue(),
+    $note->getString()
+  );
+}
+
+```
+
+will output something like
+
+```
+Track 1 - Measure 1 - Beat 6240 - Voice 0 - Note 11/3
+Track 1 - Measure 1 - Beat 6480 - Voice 0 - Note 0/2
+
+[...]
+
+Track 2 - Measure 1 - Beat 960 - Voice 0 - Note 5/2
+Track 2 - Measure 1 - Beat 1920 - Voice 0 - Note 5/2
+Track 2 - Measure 1 - Beat 2880 - Voice 0 - Note 5/2
+Track 2 - Measure 1 - Beat 3840 - Voice 0 - Note 5/2
+
+[...]
+
+```
+
+
+All referential can be accessed starting from a note.
+
+This example does not take into account some aspects of the referential
+ such as rest beats, durations, dead notes, note effects and chord beats.
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
