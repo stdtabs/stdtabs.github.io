@@ -19,8 +19,8 @@ excerpt: All documentation for basic PhpTabs features.
 - [Architecture](#architecture)
 
 - [Traversing](#traversing)
-  - [Getter/setter/counter rules](#getter-setter-counter-rules)
-  - [Traversing, a naive example](traversing-a-naive-example)
+  - [Getter/setter/counter rules](#gettersettercounter-rules)
+  - [Traversing, a naive example](#traversing-a-naive-example)
   - Traversing, real world example
 
 ------------------------------------------------------------------------
