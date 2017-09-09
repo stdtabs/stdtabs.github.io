@@ -9,10 +9,12 @@ excerpt: PhpTabs tutorial for rendering a track as a VexTab string.
 
 # Render as a VexTab string
 
-VexTab format is supplied by vexflow.com. If you want to know more 
-about VexTab format, there is a [good tutorial](http://www.vexflow.com/vextab/tutorial.html).
+VexTab format is provided by vexflow.com. If you want to know more 
+about VexTab format, there is a 
+[good tutorial](http://www.vexflow.com/vextab/tutorial.html).
 
-PhpTabs (>= 0.5.0) can [render](basics.html#render) a track as a VexTab string.
+PhpTabs (>= 0.5.0) can [render](basics.html#render) a track as a VexTab 
+string.
 
 ## Quick Usage
 
@@ -33,7 +35,8 @@ echo $tab
 
 ```
 
-The [render()](basics.html#render) method takes a track index as parameter.
+The [render()](basics.html#render) method takes a track index as 
+parameter.
 It starts from 0 for the first track.
 
 This example will ouput something like:
