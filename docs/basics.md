@@ -347,11 +347,7 @@ echo $tabs->getName();
 
 ### Render
 
-_Not yet implemented_ 
-
-Planned for 0.5.0 (testable in the master branch)
-
-Render is made in 2 steps:
+Rendering is made in 2 steps:
 
 1. __Get a specific renderer with `getRenderer($type)`__
   
@@ -398,6 +394,19 @@ for ($i = 0; $i < $tab->countTracks(); $i++) {
     ->render($i);
 
 }
+
+```
+
+If you need to render only the first track:
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Render the first track
+echo $tab
+    ->getRenderer('vextab')
+    ->render(0);
 
 ```
 

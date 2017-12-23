@@ -217,5 +217,5 @@ Lyrics integration still has to be done.
 
 ------------------------------------------------------------------------
 
-{% capture doc_url %}{{ site.github_doc_repository_url }}/docs/api-renderer.vextab.md{% endcapture %}
+{% capture doc_url %}{{ site.github_doc_repository_url }}/docs/renderer.vextab.md{% endcapture %}
 {% include edit-doc-link.html %}
