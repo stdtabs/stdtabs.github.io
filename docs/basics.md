@@ -13,7 +13,11 @@ excerpt: All documentation for basic PhpTabs features.
   - [Read from a file](#read-from-a-file)
   - [Save to a file](#save-to-a-file)
   - [Convert](#convert)
-  - [Export and Import](#export-and-import-data)
+  - [Export](#export-data)
+  - [Import](#import-data)
+    - [import($data) method](#import-data-method]
+    - [fromJson($filename) method](#fromjson-filename-method]
+    - [fromSerialized($filename) method](#fromserialized-filename-method]
   - [Render](#render)
 
 - [Architecture](#architecture)
@@ -124,7 +128,7 @@ Available file formats are .gp3, .gp4, .gp5, .mid and .midi.
 
 ------------------------------------------------------------------------
 
-### Export and import data
+### Export data
 
 Export operation are made to put all internal data to a machine readable format (XML, JSON, YML, PHP array).
 
@@ -181,11 +185,73 @@ file_put_contents(
 
 ```
 
-#### Import
+[_^ Table of contents_]({{ page.permalink }}#top)
 
-_Not yet implemented_ 
+------------------------------------------------------------------------
 
-Planned for 0.6.0
+### Import data
+
+Importing data can be faster than parsing a big Guitar Pro file.
+
+Especially when you have exported a song track-by-track.
+
+#### Import($data) method
+
+`$data` must be an array.
+
+```php
+
+// Prepare a tabs to export
+$tab = new PhpTabs('mytabs.gp4');
+
+// Export data as a PHP array
+$data = $tab->export();
+
+$importedTab = (new Phptabs())->import($data);
+
+// Imported tabs is a new PhpTabs instance with all informations
+// that initial $tab contained.
+
+echo $importedTab->getName(); // Would be the same as $tab->getName()
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+#### fromJson($filename) method
+
+Sometimes, you need to load some data from a JSON file.
+
+`fromJson()` is a shortcut method to load a tablature from previously 
+exported data with a JSON format (ie: `$tabs->export('json')`). 
+
+It accepts a filename as parameter and returns a PhpTabs instance.
+
+```php
+
+$tabs = (new Phptabs())->fromJson('mytabs.json');
+
+echo $tabs->getName();
+
+```
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+#### fromSerialized($filename) method
+
+Sometimes, you need to load some data from a PHP serialized file.
+
+`fromSerialized()` is a shortcut method to load a tablature from previously 
+exported data with a PHP serialized format (ie: `$tabs->export('serialize')`). 
+
+It accepts a filename as parameter and returns a PhpTabs instance.
+
+```php
+
+$tabs = (new Phptabs())->fromSerialized('mytabs.ser');
+
+echo $tabs->getName();
+
+```
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
