@@ -15,9 +15,9 @@ excerpt: All documentation for basic PhpTabs features.
   - [Convert](#convert)
   - [Export](#export-data)
   - [Import](#import-data)
-    - [import($data) method](#import-data-method]
-    - [fromJson($filename) method](#fromjson-filename-method]
-    - [fromSerialized($filename) method](#fromserialized-filename-method]
+    - [import($data) method](#import-data-method)
+    - [fromJson($filename) method](#fromjson-filename-method)
+    - [fromSerialized($filename) method](#fromserialized-filename-method)
   - [Render](#render)
 
 - [Architecture](#architecture)
