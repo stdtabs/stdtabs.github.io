@@ -13,7 +13,7 @@ excerpt: All documentation for basic PhpTabs features.
   - [Read from a file](#read-from-a-file)
   - [Save to a file](#save-to-a-file)
   - [Convert](#convert)
-  - [Dump and Import](#dump-and-import-data)
+  - [Export and Import](#export-and-import-data)
   - [Render](#render)
 
 - [Architecture](#architecture)
@@ -27,7 +27,7 @@ excerpt: All documentation for basic PhpTabs features.
 
 ## Features
 
-PhpTabs basics are the read, write, convert, dump, import and render operations.
+PhpTabs basics are the read, write, convert, export, import and render operations.
 
 This document describes the best way to use these tools.
 
@@ -124,21 +124,21 @@ Available file formats are .gp3, .gp4, .gp5, .mid and .midi.
 
 ------------------------------------------------------------------------
 
-### Dump and import data
+### Export and import data
 
-Dump operation are made to put all internal data to a machine readable format (XML, JSON, YML, PHP array).
+Export operation are made to put all internal data to a machine readable format (XML, JSON, YML, PHP array).
 
 It's useful to transport data and make some debug, some caching, etc...
 
-After data has been dumped, it's possible to import it with import methods.
+After data has been exported, it's possible to import it with import methods.
 
-#### dump($format)
+#### export($format)
 
 __Type__ *string\|array*
 
 __Parameter__ *string* $format 
 
-Dumps are made to visualize the internal music-tree or to communicate 
+Exports are made to visualize the internal music-tree or to communicate 
 with a third-party application.
 
 Following formats are allowed:
@@ -160,23 +160,23 @@ Following formats are allowed:
 $tab = new PhpTabs('mytabs.gp4');
 
 // Get as a PHP array
-$data = $tab->dump();
-$data = $tab->dump('array');
+$data = $tab->export();
+$data = $tab->export('array');
 
 // Get as an XML string
-echo $tab->dump('xml');
+echo $tab->export('xml');
 
 // Get as a JSON string
-echo $tab->dump('json');
+echo $tab->export('json');
 
 // Get as a YAML string
-echo $tab->dump('yml');
-echo $tab->dump('yaml');
+echo $tab->export('yml');
+echo $tab->export('yaml');
 
-// Dump content into a file as XML
+// Export content into a file as XML
 file_put_contents(
   'tab.xml',
-  $tab->dump('xml')
+  $tab->export('xml')
 );
 
 ```
@@ -265,8 +265,8 @@ for ($i = 0; $i < $tab->countTracks(); $i++) {
 - __Reader__ imports data from files to the internal model,
 - __Writer__  exports data to a binary file,
 - __Renderer__ exports data to a human-readable representation,
-- __Dumper__ exports data to machine compliant formats,
-- __Importer__ imports data from internal dumps
+- __Exporter__ exports data to machine compliant formats,
+- __Importer__ imports data from internal exports
 
 With the internal model, you can easily convert files from one type to another.
 

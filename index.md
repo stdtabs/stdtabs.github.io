@@ -22,7 +22,7 @@ Phptabs is built on the top of a [music stack](phptabs.html) that lets you creat
 
 - [Read](basics.html#read-from-a-file), [convert](basics.html#convert) and [write](basics.html#save-to-a-file) GuitarPro/MIDI files
 - Traverse and CRUD metadata and data
-- [Dump](basics.html#dump-and-import-data) data to JSON, XML, YAML and other formats
+- [Export](basics.html#export-and-import-data) data to JSON, XML, YAML and other formats
 - Web-rendering in [VexTab notation](render-as-vextab.html)
 
 ------------------------------------------------------------------------
@@ -34,7 +34,7 @@ Phptabs is built on the top of a [music stack](phptabs.html) that lets you creat
 - [Basics](basics.html)
   - [Read a file](basics.html#read-from-a-file)
   - [Save to a file](basics.html#save-to-a-file)
-  - [Dump and Import](basics.html#dump-and-import-data)
+  - [Export and Import](basics.html#export-and-import-data)
   - [Render](basics.html#render)
   - [Architecture](basics.html#architecture)
   - [Traversing](basics.html#traversing)
