@@ -15,7 +15,7 @@ excerpt: All documentation for basic PhpTabs features.
   - [Convert](#convert)
   - [Export](#export-data)
     - [export() method](#exportformat)
-    - [exportTrack() method](#exporttrackindex)
+    - [exportTrack() method](#exporttracktrackindex-format)
   - [Import](#import-data)
     - [import($data) method](#importdata-method)
     - [fromJson($filename) method](#fromjsonfilename-method)
@@ -191,7 +191,8 @@ file_put_contents(
 
 __Type__ *string\|array*
 
-__Parameter__ *int*    $trackIndex 
+__Parameter__ *int*    $trackIndex
+
 __Parameter__ *string* $format 
 
 You can build a high-performance cache in exporting big tablatures 
@@ -274,7 +275,9 @@ Especially when you have exported a song track-by-track.
 
 #### Import($data) method
 
-`$data` must be an array.
+__Type__ *\PhpTabs\Phptabs*
+
+__Parameter__ *array*    $data
 
 ```php
 
@@ -297,6 +300,10 @@ echo $importedTab->getName(); // Would be the same as $tab->getName()
 
 #### fromJson($filename) method
 
+__Type__ *\PhpTabs\Phptabs*
+
+__Parameter__ *string*    $filename
+
 Sometimes, you need to load some data from a JSON file.
 
 `fromJson()` is a shortcut method to load a tablature from previously 
@@ -314,6 +321,10 @@ echo $tabs->getName();
 [_^ Table of contents_]({{ page.permalink }}#top)
 
 #### fromSerialized($filename) method
+
+__Type__ *\PhpTabs\Phptabs*
+
+__Parameter__ *string*    $filename
 
 Sometimes, you need to load some data from a PHP serialized file.
 
