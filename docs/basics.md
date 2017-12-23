@@ -14,10 +14,12 @@ excerpt: All documentation for basic PhpTabs features.
   - [Save to a file](#save-to-a-file)
   - [Convert](#convert)
   - [Export](#export-data)
+    - [export() method](#exportformat)
+    - [exportTrack() method](#exporttrackindex)
   - [Import](#import-data)
-    - [import($data) method](#import-data-method)
-    - [fromJson($filename) method](#fromjson-filename-method)
-    - [fromSerialized($filename) method](#fromserialized-filename-method)
+    - [import($data) method](#importdata-method)
+    - [fromJson($filename) method](#fromjsonfilename-method)
+    - [fromSerialized($filename) method](#fromserializedfilename-method)
   - [Render](#render)
 
 - [Architecture](#architecture)
@@ -184,6 +186,81 @@ file_put_contents(
 );
 
 ```
+
+#### exportTrack($trackIndex, $format)
+
+__Type__ *string\|array*
+
+__Parameter__ *int*    $trackIndex 
+__Parameter__ *string* $format 
+
+You can build a high-performance cache in exporting big tablatures 
+track-by-track as JSON files.
+
+So, when you will need to read a particular track, you only have to load
+the data for this track, without loosing global song informations.
+
+
+```php
+
+$tab = new PhpTabs('mytabs.gp4');
+
+// Export all tracks, one-by-one as JSON files
+for ($i = 0; $i < $tab->countTracks(); $i++) {
+  file_put_contents(
+    'mytabs-track' . $i . '.json',
+    $tab->exportTrack($i, 'json')
+  );
+}
+
+// Now you can read a particular track
+$tab = (new PhpTabs())->fromJson('mytabs-track1.json'); // Second track
+
+// Global song information has been kept
+echo $tab->getName();
+
+// Read track information as a single-track song
+echo $tab->getTrack(0)->getName(); // Print the track name
+
+```
+
+It can be even faster:
+
+- export a song track-by-track as PHP arrays to a memcache-like (RAM storage)
+- import a particular track directly from this storage
+
+Here is a simple usage:
+
+```php
+
+// Memcache instance
+$memcache = new Memcache;
+$memcache->connect('localhost', 11211);
+
+// Export data to Memcache
+$memcache->set(
+  'tabs-track0-key',
+  $tabs->exportTrack(0) // Export only the first track
+);
+
+// Load a particular track from a memcache entry
+$tabs = (new PhpTabs())->import(
+  $memcache->get('tabs-track0-key')
+);
+
+// Global song information has been kept
+echo $tabs->getName();
+
+// Read track information as a single-track song
+echo $tabs->getTrack(0)->getName(); // Print the track name
+
+// Render as a vextab string
+echo $tabs->getRenderer('vextab')->render(0);
+
+```
+
+This way is recommended when you have to deal with web constraints.
+
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
