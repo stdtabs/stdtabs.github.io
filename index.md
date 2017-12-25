@@ -21,8 +21,9 @@ Phptabs is built on the top of a [music stack](phptabs.html) that lets you creat
 ## Features
 
 - [Read](basics.html#read-from-a-file), [convert](basics.html#convert) and [write](basics.html#save-to-a-file) GuitarPro/MIDI files
-- Traverse and CRUD metadata and data
-- [Export](basics.html#export-and-import-data) data to JSON, XML, YAML and other formats
+- [Traverse](basics.html#traversing) and CRUD metadata and data
+- [Export](basics.html#export-data) data to JSON, XML, YAML and other formats
+- [Import](basics.html#import-data) data from PHP arrays, JSON & serialized strings
 - Web-rendering in [VexTab notation](render-as-vextab.html)
 
 ------------------------------------------------------------------------
@@ -72,7 +73,7 @@ PhpTabs currently supports the following file formats:
 
 ## Requirements
 
-Support for PHP 5.4, 5.5, 5.6, 7.0, 7.1 and HHVM
+Support for PHP 5.4, 5.5, 5.6, 7.0, 7.1, 7.2 and HHVM
 
 ------------------------------------------------------------------------
 
