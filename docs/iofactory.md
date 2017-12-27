@@ -15,11 +15,11 @@ IOFactory is done in order to:
 ## Table of contents
 
 - [create()](#create)
-- [fromFile()](#fromfile-filename-type)
-- [fromJsonFile()](#fromjsonfile-filename)
-- [fromSerializedFile()](#fromserializedfile-filename)
-- [fromJson()](#fromjson)
-- [fromSerialized()](#fromserialized)
+- [fromFile()](#fromfilefilename-type)
+- [fromJsonFile()](#fromjsonfilefilename)
+- [fromSerializedFile()](#fromserializedfilefilename)
+- [fromJson()](#fromjsonstring)
+- [fromSerialized()](#fromserializedstring)
 
 All these methods return a [PhpTabs](/phptabs.html) resource.
 
