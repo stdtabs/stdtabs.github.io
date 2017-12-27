@@ -7,20 +7,24 @@ excerpt: All documentation for basic PhpTabs features.
 
 # PhpTabs basics
 
+PhpTabs basics are the read, write, convert, export, import and render operations.
+
+This document describes the best ways to use these tools.
+
 ## Table of contents
 
-- [Features](#features)
-  - [Read from a file](#read-from-a-file)
-  - [Save to a file](#save-to-a-file)
-  - [Convert](#convert)
-  - [Export](#export-data)
-    - [export() method](#exportformat)
-    - [exportTrack() method](#exporttracktrackindex-format)
-  - [Import](#import-data)
-    - [import($data) method](#importdata-method)
-    - [fromJson($filename) method](#fromjsonfilename-method)
-    - [fromSerialized($filename) method](#fromserializedfilename-method)
-  - [Render](#render)
+- [Instanciate a PhpTabs](#instanciate-a-phptabs)
+
+- [Save to a file](#save-to-a-file)
+- [Convert](#convert)
+- [Export](#export-data)
+  - [export() method](#exportformat)
+  - [exportTrack() method](#exporttracktrackindex-format)
+- [Import](#import-data)
+  - [import($data) method](#importdata-method)
+  - [fromJson($filename) method](#fromjsonfilename-method)
+  - [fromSerialized($filename) method](#fromserializedfilename-method)
+- [Render](#render)
 
 - [Architecture](#architecture)
 
@@ -31,19 +35,12 @@ excerpt: All documentation for basic PhpTabs features.
 
 ------------------------------------------------------------------------
 
-## Features
+## Instanciate a PhpTabs
 
-PhpTabs basics are the read, write, convert, export, import and render operations.
+PhpTabs can read file types:
 
-This document describes the best way to use these tools.
-
-[_^ Table of contents_]({{ page.permalink }}#top)
-
-------------------------------------------------------------------------
-
-### Read from a file
-
-Files are binary resources such Guitar Pro or MIDI files.
+- binary resources such Guitar Pro and MIDI files
+- exported data such JSON or PHP serialized exports
 
 A read operation involves reading and parsing the entire file.
 
@@ -60,13 +57,40 @@ $tab = new PhpTabs('mytabs.gp4');
 
 ```
 
+Since PhpTabs >= 0.6.0, there is an [IOFactory](iofactory.html#top) to 
+read a tabs from various file types and formats.
+
+
+```php
+use PhpTabs\IOFactory;
+
+// Since PhpTabs >= 0.6.0, fromFile() automatically detects file types
+$tab = IOFactory::fromFile('mytabs.gp4');
+
+// Force file type to serialized
+$tab = IOFactory::fromFile('mytabs.dat', 'ser');
+
+// Try to read a JSON file
+$tab = IOFactory::fromJsonFile('mytabs.json');
+
+// Try to read a serialized file
+$tab = IOFactory::fromSerializedFile('mytabs.dat');
+
+```
+
 After a read operation, the instance is containing the entire [song](music-song.html#top).
+
+For more informations about reading files and strings
+read the [IOFactory methods](iofactory.html).
+
 
 [_^ Table of contents_]({{ page.permalink }}#top)
 
 ------------------------------------------------------------------------
 
-### Save to a file
+
+
+## Save to a file
 
 A PhpTabs instance is containing all data.
 
