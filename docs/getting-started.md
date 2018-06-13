@@ -15,6 +15,8 @@ composer require stdtabs/phptabs
 
 ## Quick Usage
 
+- Print a song name
+
 ```php
 
 include 'vendor/autoload.php';
@@ -26,6 +28,30 @@ $song = new PhpTabs('mytab.gp4');
 echo $song->getName();
 
 ```
+
+- Print all track names
+
+```php
+
+include 'vendor/autoload.php';
+
+use PhpTabs/PhpTabs;
+
+$song = new PhpTabs('mytab.gp4');
+
+foreach ($song->getTracks() as $track) {
+  echo sprinf(
+    '\n#%d - %s',
+    $track->getNumber(),
+    $track->getName()
+  );
+}
+
+```
+
+For more examples, see [traversing the tree](/phptabs.html#traversing-the-tree-is-made-simple) documentation
+
+
 
 ------------------------------------------------------------------------
 
