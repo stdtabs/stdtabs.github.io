@@ -25,6 +25,7 @@ Phptabs is built on the top of a [music stack](phptabs.html) that lets you creat
 - [Export](basics.html#export-data) data to JSON, XML, YAML and other formats
 - [Import](basics.html#import-data) data from PHP arrays, JSON & serialized strings
 - Web-rendering in [VexTab notation](render-as-vextab.html)
+- [Calculate durations in seconds](calculate-measure-and-beat-durations-in-seconds.html)
 
 ------------------------------------------------------------------------
 
@@ -51,6 +52,8 @@ Phptabs is built on the top of a [music stack](phptabs.html) that lets you creat
   - Read and update song metadata (Name, author)
 
   - [Render a track as a VexTab string](render-as-vextab.html)
+
+  - [Calculate durations in seconds](calculate-measure-and-beat-durations-in-seconds.html)
 
   - Read measures for a particular track
 
