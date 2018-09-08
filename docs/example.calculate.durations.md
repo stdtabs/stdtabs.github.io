@@ -57,15 +57,17 @@ Duration=2s
 
 ------------------------------------------------------------------------
 
-## Calculate beat duration
+## Beat duration
 
-Calculating beat duration is quite more complex. It depends on:
+Calculating beat duration in seconds is quite more complex. It depends 
+on:
 
 - tempo
 - time signature
-- non dotted, dotted, double dotted beat
+- non dotted, dotted or double dotted beat
+- division type
 
-PhpTabs (>=0.6.0) provides a shortcut method to get this value.
+PhpTabs (>=0.6.0) provides a shortcut method to easily get this value.
 
 The `getTime()` method is provided by the `\PhpTabs\Music\Voice` model.
 
