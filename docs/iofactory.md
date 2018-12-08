@@ -15,6 +15,7 @@ IOFactory is done in order to:
 ## Table of contents
 
 - [create()](#create)
+- [fromArray()](#fromarray-$data)
 - [fromFile()](#fromfilefilename-type)
 - [fromJsonFile()](#fromjsonfilefilename)
 - [fromSerializedFile()](#fromserializedfilefilename)
@@ -41,6 +42,45 @@ use PhpTabs\IOFactory;
 
 // Equivalent to 'new PhpTabs()'
 $tab = IOFactory::create();
+
+// Print track number
+echo "Track count=" . $tab->countTracks();
+
+// Should return "Track count=0"
+
+```
+
+[_^ Table of contents_]({{ page.permalink }}#top)
+
+------------------------------------------------------------------------
+
+## fromArray($data)
+
+This method returns a [PhpTabs](/phptabs.html) resource, loaded from a 
+PHP array.
+
+#### Parameters
+
+- _array_ $data
+
+#### Type
+
+[\PhpTabs\PhpTabs](/phptabs.html)
+
+#### Example
+
+```php
+
+use PhpTabs\IOFactory;
+
+// Create an empty tabs
+$tab = IOFactory::create();
+
+// Export as an array
+$data = $tab->export();
+
+// Now you can reimport as an array
+$tab = IOFactory::fromArray($data);
 
 // Print track number
 echo "Track count=" . $tab->countTracks();
