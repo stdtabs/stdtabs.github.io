@@ -24,7 +24,7 @@ The following code prints all tabstaves of the first track.
 
 include 'vendor/autoload.php';
 
-use PhpTabs/PhpTabs;
+use PhpTabs\PhpTabs;
 
 $tab = new PhpTabs('mytab.gp4');
 
@@ -66,7 +66,7 @@ If the value is the same as VexTab defaults, it won't be printed.
 
 include 'vendor/autoload.php';
 
-use PhpTabs/PhpTabs;
+use PhpTabs\PhpTabs;
 
 $tab = new PhpTabs('mytab.gp4');
 
