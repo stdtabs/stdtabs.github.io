@@ -21,7 +21,7 @@ composer require stdtabs/phptabs
 
 include 'vendor/autoload.php';
 
-use PhpTabs/PhpTabs;
+use PhpTabs\PhpTabs;
 
 $song = new PhpTabs('mytab.gp4');
 
@@ -35,7 +35,7 @@ echo $song->getName();
 
 include 'vendor/autoload.php';
 
-use PhpTabs/PhpTabs;
+use PhpTabs\PhpTabs;
 
 $song = new PhpTabs('mytab.gp4');
 
