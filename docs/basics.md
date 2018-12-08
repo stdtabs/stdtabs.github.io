@@ -40,7 +40,7 @@ This document describes the best ways to use these tools.
 PhpTabs can read file types:
 
 - binary resources such Guitar Pro and MIDI files
-- exported data such JSON or PHP serialized exports
+- exported data such JSON, PHP serialized or PHP array exports
 
 A read operation involves reading and parsing the entire file.
 
@@ -75,6 +75,15 @@ $tab = IOFactory::fromJsonFile('mytabs.json');
 
 // Try to read a serialized file
 $tab = IOFactory::fromSerializedFile('mytabs.dat');
+
+// Try to read a serialized string
+$tab = IOFactory::fromSerialized($serializedString);
+
+// Try to read a JSON string
+$tab = IOFactory::fromJson($jsonString);
+
+// Try to read a PHP array
+$tab = IOFactory::fromArray($array);
 
 ```
 
