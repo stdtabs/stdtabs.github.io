@@ -62,7 +62,7 @@ $song = new PhpTabs('mytab.gp4');
 echo $song->getVersion(); // 0.6.0
 
 ```
-For various basic usages, see [PhpTabs basics](/basic.html#top) documentation.
+For various basic usages, see [PhpTabs basics](/basics.html#top) documentation.
 
 For more examples, see [traversing the tree](/phptabs.html#traversing-the-tree-is-made-simple) documentation.
 
