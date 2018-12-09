@@ -49,6 +49,21 @@ foreach ($song->getTracks() as $track) {
 
 ```
 
+- Print PhpTabs version (PhpTabs >= 0.6)
+
+```php
+
+include 'vendor/autoload.php';
+
+use PhpTabs\PhpTabs;
+
+$song = new PhpTabs('mytab.gp4');
+
+echo $song->getVersion(); // 0.6.0
+
+```
+
+
 For more examples, see [traversing the tree](/phptabs.html#traversing-the-tree-is-made-simple) documentation
 
 
