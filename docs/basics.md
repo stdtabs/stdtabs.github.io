@@ -389,6 +389,7 @@ Rendering is made in 2 steps:
     | Parameter      | Type      | Description             |
     |:---------------|:----------|:------------------------|
     | vextab         | *string*  | A vextab string         |
+    | ascii          | *string*  | An ASCII tablature      |
 
 2. __Render as string with `render()` method__
 
@@ -444,6 +445,8 @@ echo $tab
 ```
 
 [See another example of the VexTab renderer](render-as-vextab.html#top)
+
+[See dedicated manual for the ASCII renderer](render-as-an-ascii-tab.html#top)
 
 
 [_^ Table of contents_]({{ page.permalink }}#top)
