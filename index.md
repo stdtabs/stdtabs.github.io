@@ -52,6 +52,8 @@ Phptabs is built on the top of a [music stack](phptabs.html) that lets you creat
   - Read and update song metadata (Name, author)
 
   - [Render a track as a VexTab string](render-as-vextab.html)
+  
+  - [Render a track as an ASCII tablature](render-as-ascii.html)
 
   - [Calculate durations in seconds](calculate-measure-and-beat-durations-in-seconds.html)
 
@@ -76,7 +78,7 @@ PhpTabs currently supports the following file formats:
 
 ## Requirements
 
-Support for PHP 5.4, 5.5, 5.6, 7.0, 7.1, 7.2 and HHVM
+Support for PHP 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3 and HHVM
 
 ------------------------------------------------------------------------
 
