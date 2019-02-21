@@ -62,7 +62,7 @@ Phptabs is built on the top of a [music stack](phptabs.html) that lets you creat
 
   - Read notes for a particular measure
 
-  - Create a tab from scratch (An empty song)
+  - [Create a tab from scratch (An empty song)](create-a-tablature-from-scratch.html)
 
 ------------------------------------------------------------------------
 
