@@ -24,13 +24,13 @@ $song = new PhpTabs();
 echo $song->getName();
 ```
 
-This is only sufficient to make basic operations but it failed if we want to save it as a Guitar Pro 3 format.
+This is only sufficient to make basic operations but it failed if we want to save it as Guitar Pro or MIDI format.
 
 
 A minimal and working tablature
 -------------------------------
 
-Now, we will create a tablature with one track and one measure in it.
+We will create a tablature of one track with one measure.
 
 In addition to the track, we have to define a channel, a measure header and a measure.
 
@@ -87,7 +87,7 @@ $tablature->addTrack($track);
 $tablature->save('test.gp5');
 ```
 
-Note that objects could be have been instanciated in a different order.
+Note that objects could have been instanciated in a different order.
 An approach would have been to create all measure headers first.
 Then to create measures for several tracks.
 Finally, we could have created the tracks and their channels in order to integrate everything. 
@@ -96,9 +96,9 @@ Finally, we could have created the tracks and their channels in order to integra
 A working tablature with several tracks and measures
 ----------------------------------------------------
 
-We've seen how to create a basic tablature. It's time to see how to build a more complex tablature.
+We've seen how to create a basic tablature. It's time to build a more complex tablature.
 
-Let's fix the goals:
+Let's set our goals:
 - One song called 'My song with notes'
 - 2 tracks, one for a Piano and one for a Contrabass
 - 2 measures per track and one note per measure
@@ -131,7 +131,7 @@ $contrabass_track = new Track();
 $channel0 = new Channel();
 $channel0->setProgram(0); // This program is for piano
 $channel1 = new Channel();
-$channel1->setProgram(43); // This program is  for contrabass
+$channel1->setProgram(43); // This program is for contrabass
 
 // One measure header for each measure
 $mh0 = new MeasureHeader();
@@ -161,7 +161,7 @@ foreach ([
     $note = new Note();
     // Attach note to the beat
     $beat->getVoice(0)->addNote($note);
-    // Make a variation for the note
+    // Make a random value for the note
     $note->setValue(rand(0, 5));
     // Attach beat to the measure
     $measure->addBeat($beat);
@@ -198,14 +198,19 @@ $contrabass_track->setChannelId($channel1->getChannelId());
 $tablature->addTrack($piano_track);
 $tablature->addTrack($contrabass_track);
 
+/* --------------------------------------------------
+ | Now that we have a functionnal song, we can work
+ | with it
+ | -------------------------------------------------- */
 
-// Now we can render the first track as a vextab string
+// Render the first track as a vextab string
 echo $tablature->getRenderer('vextab')->render(0);
 
-// Now we can render the second track as an ASCII string
+// Render the second track as an ASCII string
 echo $tablature->getRenderer('ascii')->render(1);
 
-$tablature->save('test.gp5');
+// Save it as a Guitar Pro 5 file
+$tablature->save('song-2-tracks-2-measures.gp5');
 ```
 
 Some important things to keep in mind:
@@ -213,8 +218,8 @@ Some important things to keep in mind:
 - Measure headers are defined globally (attached to the Song)
 - Measures are defined per track
 - you MUST have the same number of measures for each track
-- This number of measure MUST be equal to the number of measure headers
-- For all tracks, a measure number 0 MUST is bound to the measure header number 0, and so on for all measures
+- This number of measures MUST be equal to the number of measure headers
+- For all tracks, a measure number 0 MUST be bound to the measure header number 0, and so on for all measures
 - To understand how elements are built on each other and how to be on the right scope to interact with them, 
 refer to the [object tree](https://stdtabs.github.io/phptabs.html#mom) 
 and to the [getting/setting/counting rules](https://stdtabs.github.io/basics.html#traversing)
