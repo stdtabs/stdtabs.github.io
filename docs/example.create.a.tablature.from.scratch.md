@@ -38,6 +38,7 @@ In addition to the track, we have to define a channel, a measure header and a me
 use PhpTabs\Music\Channel;
 use PhpTabs\Music\Measure;
 use PhpTabs\Music\MeasureHeader;
+use PhpTabs\Music\TabString;
 use PhpTabs\Music\Track;
 use PhpTabs\PhpTabs;
 
@@ -50,18 +51,26 @@ $tablature = new PhpTabs();
 
 // Create one track 
 $track = new Track();
+$track->setName('My first track');
+
+// Define 6 strings
+foreach ([64, 59, 55, 50, 45, 40] as $index => $value) {
+    $string = new TabString($index + 1, $value);
+    $track->addString($string);
+}
 
 // One channel
 $channel = new Channel();
+$channel->setId(1);
 
 // One measure header, will be shared
 // by all first measures of all tracks
 $mh = new MeasureHeader();
+$mh->setNumber(1);
 
 // One specific measure for the first track,
 // with a MeasureHeader as only parameter
 $measure = new Measure($mh);
-
 
 /* --------------------------------------------------
  | Bound them together
@@ -77,7 +86,7 @@ $tablature->addMeasureHeader($mh);
 $track->addMeasure($measure);
 
 // Bound track and its channel configuration
-$track->setChannelId($channel->getChannelId());
+$track->setChannelId($channel->getId());
 
 // Finally, attach Track to the Tablature container
 $tablature->addTrack($track);
@@ -104,6 +113,7 @@ Let's set our goals:
 - 2 measures per track and one note per measure
 
 ```php
+
 use PhpTabs\Music\Beat;
 use PhpTabs\Music\Channel;
 use PhpTabs\Music\Measure;
@@ -113,10 +123,10 @@ use PhpTabs\Music\TabString;
 use PhpTabs\Music\Track;
 use PhpTabs\PhpTabs;
 
-// Instanciates a tablature
+// Instanciate a tablature
 $tablature = new PhpTabs();
 
-// Sets song name
+// Set song name
 $tablature->setName('My song with notes');
 
 /* --------------------------------------------------
@@ -125,12 +135,18 @@ $tablature->setName('My song with notes');
 
 // Create tracks
 $piano_track = new Track();
+$piano_track->setName('Piano track');
+
 $contrabass_track = new Track();
+$contrabass_track->setName('Contrabass track');
+
 
 // Create channels
 $channel0 = new Channel();
+$channel0->setId(1);
 $channel0->setProgram(0); // This program is for piano
 $channel1 = new Channel();
+$channel1->setId(2);
 $channel1->setProgram(43); // This program is for contrabass
 
 // One measure header for each measure
@@ -191,8 +207,8 @@ $contrabass_track->addMeasure($track1_measure1);
 $contrabass_track->addString(new TabString(1, 64));
 
 // Bound tracks and their channel configurations
-$piano_track->setChannelId($channel0->getChannelId());
-$contrabass_track->setChannelId($channel1->getChannelId());
+$piano_track->setChannelId($channel0->getId());
+$contrabass_track->setChannelId($channel1->getId());
 
 // Finally, attach Tracks to the Tablature container
 $tablature->addTrack($piano_track);
@@ -219,7 +235,7 @@ Some important things to keep in mind:
 - Measures are defined per track
 - you MUST have the same number of measures for each track
 - This number of measures MUST be equal to the number of measure headers
-- For all tracks, a measure number 0 MUST be bound to the measure header number 0, and so on for all measures
+- For all tracks, a measure number 1 MUST be bound to the measure header number 1, and so on for all measures
 - To understand how elements are built on each other and how to be on the right scope to interact with them, 
 refer to the [object tree](https://stdtabs.github.io/phptabs.html#mom) 
 and to the [getting/setting/counting rules](https://stdtabs.github.io/basics.html#traversing)
