@@ -26,6 +26,8 @@ It builds a musical tree which is called the __Music-Object-Model__ (MOM).
   - [_Song_](music-song.html#top) [parent]
   - Tempo
   - TimeSignature
+    - Duration
+      - DivisionType
 
   [... measureHeaders ]
 
@@ -37,7 +39,6 @@ It builds a musical tree which is called the __Music-Object-Model__ (MOM).
     - [_Track_](music-track.html#top) [parent]
     - Marker
     - MeasureHeader
-    - TimeSignature
     - []__Beat__
       - _Measure_ [parent]
       - Stroke
@@ -64,7 +65,7 @@ It builds a musical tree which is called the __Music-Object-Model__ (MOM).
 
   [... measures ]
 
-  - []TabString
+  - []__TabString__
 
 [... tracks ]
 
