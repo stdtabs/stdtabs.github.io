@@ -15,7 +15,7 @@ IOFactory is done in order to:
 ## Table of contents
 
 - [create()](#create)
-- [fromArray()](#fromarray-$data)
+- [fromArray()](#fromarray-data)
 - [fromFile()](#fromfilefilename-type)
 - [fromJsonFile()](#fromjsonfilefilename)
 - [fromSerializedFile()](#fromserializedfilefilename)
